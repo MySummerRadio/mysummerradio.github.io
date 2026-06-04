@@ -13,3 +13,4 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+res/
