@@ -7,11 +7,16 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "start": "concurrently \"astro dev\" \"wait-port 4321 && xdg-open http://localhost:4321/\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^6.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "wait-port": "^1.1.0"
   }
 }
