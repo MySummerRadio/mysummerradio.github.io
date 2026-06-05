@@ -2,7 +2,6 @@
 title: My Blog Post
 pubDate: 2026-06-04
 description: This is the first post of my new Astro blog.
-draft: false
 published: true
 ---
 Welcome to my *new blog* about learning Astro! Here, I will share my learning journey as I build a new website.
