@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Blog from "../components/Blog.astro";
 
 const pageTitle = "My Summer Radio";
 ---
@@ -7,23 +8,45 @@ const pageTitle = "My Summer Radio";
 <Layout pageTitle={pageTitle}>
     <div class="container">
         <h1>=== Welcome to My Summer Radio :) ===</h1>
+        <div class="col left">
+            <h2>left col</h2>
+        </div>
+        <div class="col center">
+            <h2>Blog</h2>
+            <Blog />
+        </div>
+        <div class="col right">
+            <h2>right col</h2>
+        </div>
     </div>
 </Layout>
 
 <style>
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 2vw;
+        max-width: 1200px;
+        margin-inline: auto;
     }
 
     h1 {
+        grid-column: 1 / -1;
+        place-self: center;
+        text-align: center;
         text-transform: uppercase;
         font-size: 3rem;
         font-weight: 400;
         text-shadow:
             0 -0.5rem 1rem white,
             0 0.5rem 1rem #999;
+    }
+
+    .col {
+        background: rgb(256, 256, 256, 0.8);
+        color: black;
+        padding: 1rem;
+        box-shadow: 0 0.5rem 1rem #999;
+        min-height: 50vh;
     }
 </style>
