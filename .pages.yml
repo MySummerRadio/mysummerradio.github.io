@@ -11,8 +11,9 @@ content:
         type: string
       - name: pubDate
         type: date
-      - name: draft
+      - name: published
         type: boolean
+        default: false
       - name: description
         type: string
       - name: body
