@@ -8,4 +8,4 @@ Ain't it funny?
 
 ![](/favicon.png)
 
-No comment!
+No comment! But I should fix the image source dir...
