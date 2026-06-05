@@ -1,6 +1,6 @@
 ---
 title: Left
-items:
+sections:
   - heading: Liens
     text: Trucs que j'aime
   - heading: Me
