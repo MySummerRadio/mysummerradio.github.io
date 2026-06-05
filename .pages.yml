@@ -1,3 +1,17 @@
 media:
   input: public/
   output: /
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/content/blog
+    fields:
+      - name: title
+        type: string
+      - name: pubDate
+        type: date
+      - name: description
+        type: string
+      - name: body
+        type: rich-text
