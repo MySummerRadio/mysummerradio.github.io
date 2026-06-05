@@ -26,6 +26,16 @@ content:
       default:
         sort: pubDate
         order: desc
+  - name: sidebars
+    label: Sidebars
+    type: group
+    items:
+      - name: left
+        type: file
+        path: src/content/sidebar-left.md
+      - name: right
+        type: file
+        path: src/content/sidebar-right.md
 settings:
   content:
     merge: true
