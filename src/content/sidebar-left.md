@@ -1,8 +1,8 @@
 ---
-title: Lefty
+title: Left
 items:
-  - heading: Me
-    text: C'est mon site à moi !
   - heading: Liens
     text: Trucs que j'aime
+  - heading: Me
+    text: C'est mon site à moi !
 ---
