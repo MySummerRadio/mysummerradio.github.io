@@ -11,6 +11,8 @@ content:
         type: string
       - name: pubDate
         type: date
+        options:
+          format: "yyyy-MM-dd"
       - name: published
         type: boolean
         default: false
