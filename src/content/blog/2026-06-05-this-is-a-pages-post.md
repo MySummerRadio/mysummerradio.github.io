@@ -3,6 +3,7 @@ title: this is a CMS post
 pubDate: 2026-06-05
 description: did it from the Pages CMS UI
 draft: true
+published: true
 ---
 Ain't it funny?
 
