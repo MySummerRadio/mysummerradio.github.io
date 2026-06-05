@@ -37,7 +37,7 @@ content:
         fields:
           - name: title
             type: string
-          - name: items
+          - name: sections
             label: Sections
             type: object
             list: true
@@ -53,7 +53,7 @@ content:
         fields:
           - name: title
             type: string
-          - name: items
+          - name: sections
             label: Sections
             type: object
             list: true
