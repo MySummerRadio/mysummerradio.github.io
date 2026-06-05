@@ -71,7 +71,7 @@ content:
   - name: about
     label: À propos
     type: file
-    path: src/content/about.md
+    path: src/pages/about.md
 settings:
   content:
     merge: true
