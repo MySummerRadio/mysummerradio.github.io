@@ -68,6 +68,10 @@ content:
                 type: string
               - name: text
                 type: rich-text
+  - name: about
+    label: À propos
+    type: file
+    path: src/content/about.md
 settings:
   content:
     merge: true
