@@ -31,11 +31,19 @@ content:
     type: group
     items:
       - name: left
+        label: Left
         type: file
         path: src/content/sidebar-left.md
+        fields:
+          - name: title
+            type: string
       - name: right
+        label: Right
         type: file
         path: src/content/sidebar-right.md
+        fields:
+          - name: title
+            type: string
 settings:
   content:
     merge: true
