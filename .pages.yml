@@ -35,7 +35,10 @@ content:
         type: file
         path: src/content/sidebar-left.md
         fields:
+          - name: title
+            type: string
           - name: items
+            label: Sections
             type: object
             list: true
             fields:
@@ -51,6 +54,7 @@ content:
           - name: title
             type: string
           - name: items
+            label: Sections
             type: object
             list: true
             fields:
