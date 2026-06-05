@@ -40,7 +40,9 @@ content:
           - name: sections
             label: Sections
             type: object
-            list: true
+            list:
+              collapsible:
+                summary: "{heading} ({index})"
             fields:
               - name: heading
                 type: string
@@ -56,7 +58,9 @@ content:
           - name: sections
             label: Sections
             type: object
-            list: true
+            list:
+              collapsible:
+                summary: "{heading} ({index})"
             fields:
               - name: heading
                 type: string
