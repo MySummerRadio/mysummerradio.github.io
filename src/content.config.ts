@@ -13,4 +13,16 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const sidebars = defineCollection({
+  loader: glob({ pattern: "sidebar-*.yaml", base: "./src/content" }),
+  schema: z.object({
+    sections: z.array(
+      z.object({
+        heading: z.string(),
+        text: z.string(),
+      }),
+    ),
+  }),
+});
+
+export const collections = { blog, sidebars };

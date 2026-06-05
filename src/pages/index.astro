@@ -1,7 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Blog from "../components/Blog.astro";
+import Sidebar from "../components/Sidebar.astro";
 
+import { getCollection, type CollectionEntry } from "astro:content";
+type SidebarEntry = CollectionEntry<"sidebars">;
+const sidebars: SidebarEntry[] = await getCollection("sidebars");
+
+console.log(sidebars[1]);
 const pageTitle = "My Summer Radio";
 ---
 
@@ -10,6 +16,7 @@ const pageTitle = "My Summer Radio";
         <h1>=== Welcome to My Summer Radio :) ===</h1>
         <div class="col left">
             <h2>left col</h2>
+            <Sidebar id="sidebar-left" />
         </div>
         <div class="col center">
             <h2>Blog</h2>
@@ -17,6 +24,7 @@ const pageTitle = "My Summer Radio";
         </div>
         <div class="col right">
             <h2>right col</h2>
+            <Sidebar id="sidebar-right" />
         </div>
     </div>
 </Layout>
@@ -43,6 +51,15 @@ const pageTitle = "My Summer Radio";
     }
 
     .col {
+        display: grid;
+        align-items: start;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        gap: 2vw;
+    }
+
+    .center {
         background: rgb(256, 256, 256, 0.8);
         color: black;
         padding: 1rem;

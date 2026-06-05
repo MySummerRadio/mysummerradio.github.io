@@ -1,0 +1,33 @@
+---
+import { getEntry, render } from "astro:content";
+
+export interface Props {
+    id: string;
+}
+
+const { id } = Astro.props;
+
+type SidebarEntry = CollectionEntry<"sidebars">;
+
+const entry: SidebarEntry = await getEntry("sidebars", id);
+
+console.log(entry.data.sections);
+---
+
+{
+    entry.data.sections.map((item) => (
+        <div>
+            <h3>{item.heading}</h3>
+            {item.text}
+        </div>
+    ))
+}
+
+<style>
+    div {
+        background: rgb(256, 256, 256, 0.75);
+        color: black;
+        padding: 1rem;
+        box-shadow: 0 0.5rem 1rem #999;
+    }
+</style>
