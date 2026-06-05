@@ -50,7 +50,6 @@ content:
         fields:
           - name: title
             type: string
-        fields:
           - name: items
             type: object
             list: true
