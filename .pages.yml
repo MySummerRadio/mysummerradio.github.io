@@ -20,6 +20,12 @@ content:
         type: string
       - name: body
         type: rich-text
+    view:
+      fields: [title, pubDate, published]
+      sort: [pubDate, title]
+      default:
+        sort: pubDate
+        order: desc
 settings:
   content:
     merge: true
