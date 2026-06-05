@@ -1,6 +1,6 @@
 ---
 title: Right
-items:
+sections:
   - heading: Visites
     text: compteur de visites
 ---
