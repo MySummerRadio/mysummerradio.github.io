@@ -15,3 +15,6 @@ content:
         type: string
       - name: body
         type: rich-text
+    operations:
+      rename: false
+      delete: false
