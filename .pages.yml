@@ -42,6 +42,7 @@ content:
             type: object
             list:
               collapsible:
+                collapsed: true
                 summary: "{heading} ({index})"
             fields:
               - name: heading
@@ -60,6 +61,7 @@ content:
             type: object
             list:
               collapsible:
+                collapsed: true
                 summary: "{heading} ({index})"
             fields:
               - name: heading
