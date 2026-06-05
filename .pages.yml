@@ -33,7 +33,7 @@ content:
       - name: left
         label: Left
         type: file
-        path: src/content/sidebar-left.md
+        path: src/content/sidebar-left.yaml
         fields:
           - name: title
             type: string
@@ -52,7 +52,7 @@ content:
       - name: right
         label: Right
         type: file
-        path: src/content/sidebar-right.md
+        path: src/content/sidebar-right.yaml
         fields:
           - name: title
             type: string
