@@ -72,6 +72,9 @@ content:
     label: À propos
     type: file
     path: src/pages/about.md
+    fields:
+      - name: title
+        type: string
 settings:
   content:
     merge: true
