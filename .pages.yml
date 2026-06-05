@@ -75,6 +75,8 @@ content:
     fields:
       - name: title
         type: string
+      - name: body
+        type: rich-text
 settings:
   content:
     merge: true
