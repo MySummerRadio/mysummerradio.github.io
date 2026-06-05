@@ -32,7 +32,7 @@ settings:
   commit:
     identity: app
     templates:
-      create: "content(create): {path}"
-      update: "content(update): {path}"
-      delete: "content(delete): {path}"
-      rename: "content(rename): {oldPath} -> {newPath}"
+      create: "chore(create): {path}"
+      update: "chore(update): {path}"
+      delete: "chore(delete): {path}"
+      rename: "chore(rename): {oldPath} -> {newPath}"
