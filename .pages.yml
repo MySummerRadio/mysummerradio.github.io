@@ -3,6 +3,20 @@ media:
     input: src/assets/images
     output: "@assets/images"
     rename: safe
+components:
+  sidebar:
+    label: Sidebar
+    type: object
+    fields:
+      - name: title
+        type: string
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{heading} ({index})"
 content:
   - name: posts
     label: Blog
@@ -40,39 +54,15 @@ content:
         type: file
         path: src/content/sidebar-left.yaml
         fields:
-          - name: title
-            type: string
-          - name: sections
-            label: Sections
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{heading} ({index})"
-            fields:
-              - name: heading
-                type: string
-              - name: text
-                type: rich-text
+          - name: sidebar-left
+            component: sidebar
       - name: right
         label: Right
         type: file
         path: src/content/sidebar-right.yaml
         fields:
-          - name: title
-            type: string
-          - name: sections
-            label: Sections
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{heading} ({index})"
-            fields:
-              - name: heading
-                type: string
-              - name: text
-                type: rich-text
+          - name: sidebar-right
+            component: sidebar
   - name: about
     label: À propos
     type: file
