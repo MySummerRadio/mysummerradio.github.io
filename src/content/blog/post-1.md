@@ -5,6 +5,7 @@ description: This is the first one
 published: false
 tags:
   - test
+  - wow
 ---
 Welcome to my *new blog*!
 
