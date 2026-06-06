@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Layout.astro
+layout: ../layouts/PostLayout.astro
 title: À propos
 ---
 # À propos
