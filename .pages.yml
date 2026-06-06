@@ -59,15 +59,39 @@ content:
         type: file
         path: src/content/sidebar-left.yaml
         fields:
-          - name: sidebar-left
-            component: sidebar
+          - name: title
+            type: string
+          - name: sections
+            label: Sections
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{heading} ({index})"
+            fields:
+              - name: heading
+                type: string
+              - name: text
+                type: rich-text
       - name: right
         label: Right
         type: file
         path: src/content/sidebar-right.yaml
         fields:
-          - name: sidebar-right
-            component: sidebar
+          - name: title
+            type: string
+          - name: sections
+            label: Sections
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{heading} ({index})"
+            fields:
+              - name: heading
+                type: string
+              - name: text
+                type: rich-text
   - name: about
     label: À propos
     type: file
