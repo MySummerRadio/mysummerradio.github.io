@@ -3,6 +3,10 @@ media:
     input: src/assets/images
     output: "@assets/images"
     rename: safe
+  - name: gallery
+    input: src/assets/gallery
+    output: "@assets/gallery"
+    rename: safe
 content:
   - name: posts
     label: Blog
@@ -73,6 +77,27 @@ content:
                 type: string
               - name: text
                 type: rich-text
+  - name: gallery
+    label: Gallery
+    type: file
+    path: src/pages/gallery.md
+    fields:
+      - name: title
+        type: string
+      - name: images
+        type: object
+        list: true
+        fields:
+          - name: image
+            type: image
+            options:
+              media: gallery
+              path: src/assets/gallery
+              rename: safe
+          - name: caption
+            type: string
+      - name: body
+        type: rich-text
   - name: about
     label: À propos
     type: file

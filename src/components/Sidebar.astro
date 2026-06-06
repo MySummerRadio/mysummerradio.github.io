@@ -10,8 +10,6 @@ const { id } = Astro.props;
 type SidebarEntry = CollectionEntry<"sidebars">;
 
 const entry: SidebarEntry = await getEntry("sidebars", id);
-
-console.log(entry.data.sections);
 ---
 
 {
