@@ -80,10 +80,8 @@ content:
   - name: gallery
     label: Gallery
     type: file
-    path: src/pages/gallery.md
+    path: src/content/gallery.json
     fields:
-      - name: title
-        type: string
       - name: images
         type: object
         list: true
@@ -96,8 +94,6 @@ content:
               rename: safe
           - name: caption
             type: string
-      - name: body
-        type: rich-text
   - name: about
     label: À propos
     type: file

@@ -1,0 +1,8 @@
+---
+import { getImage, Image } from "astro:assets";
+const { image, caption } = Astro.props;
+import myImage from {image};
+const imageData = await getImage({ src: myImage, alt: caption });
+---
+
+<Image {...imageData} />
