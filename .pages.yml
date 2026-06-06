@@ -82,9 +82,7 @@ content:
     type: file
     path: src/content/gallery.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
+    list: true
     fields:
       - name: image
         type: image
