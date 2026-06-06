@@ -15,9 +15,14 @@ content:
           format: "yyyy-MM-dd"
       - name: published
         type: boolean
-        default: false
+        default: true
       - name: description
         type: string
+      - name: tags
+        type: array
+        fields:
+          - name: tag
+            type: string
       - name: body
         type: rich-text
     view:

@@ -7,7 +7,6 @@ import { getCollection, type CollectionEntry } from "astro:content";
 type SidebarEntry = CollectionEntry<"sidebars">;
 const sidebars: SidebarEntry[] = await getCollection("sidebars");
 
-console.log(sidebars[1]);
 const pageTitle = "My Summer Radio";
 ---
 
