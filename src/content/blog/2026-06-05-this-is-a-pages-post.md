@@ -3,9 +3,7 @@ title: this is a CMS post
 pubDate: 2026-06-05
 description: did it from the Pages CMS UI
 published: true
-tags:
-  - test
-  - beauty
+tags: test, beauty
 ---
 Ain't it funny?
 

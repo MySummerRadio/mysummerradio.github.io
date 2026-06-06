@@ -19,7 +19,7 @@ content:
       - name: description
         type: string
       - name: tags
-        type: array
+        type: object
         fields:
           - name: tag
             type: string
