@@ -9,6 +9,7 @@ tags:
 ---
 Ain't it funny?
 
-![](/favicon.png)
-
 No comment! But I should fix the image source dir...
+
+![](@assets/images/iconstarpuff-green.png)
+
