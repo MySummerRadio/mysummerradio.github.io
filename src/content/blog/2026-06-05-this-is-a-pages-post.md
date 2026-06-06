@@ -4,7 +4,8 @@ pubDate: 2026-06-05
 description: did it from the Pages CMS UI
 published: true
 tags:
-  tag: test
+  - tag: rzqr
+  - tag: teszt
 ---
 Ain't it funny?
 
