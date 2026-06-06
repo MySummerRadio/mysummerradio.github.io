@@ -84,18 +84,14 @@ content:
     format: json
     list: true
     fields:
-      - name: images
-        type: object
-        list: true
-        fields:
-          - name: image
-            type: image
-            options:
-              media: gallery
-              path: src/assets/gallery
-              rename: safe
-          - name: caption
-            type: string
+      - name: image
+        type: image
+        options:
+          media: gallery
+          path: src/assets/gallery
+          rename: safe
+      - name: caption
+        type: string
   - name: about
     label: À propos
     type: file
