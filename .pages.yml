@@ -1,6 +1,8 @@
 media:
-  input: public/
-  output: /
+  - name: images
+    input: src/assets/images
+    output: "@assets/images"
+    rename: safe
 content:
   - name: posts
     label: Blog
