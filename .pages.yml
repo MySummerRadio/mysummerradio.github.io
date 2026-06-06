@@ -19,11 +19,8 @@ content:
       - name: description
         type: string
       - name: tags
-        type: object
+        type: string
         list: true
-        fields:
-          - name: tag
-            type: string
       - name: body
         type: rich-text
     view:
