@@ -17,6 +17,11 @@ components:
           collapsible:
             collapsed: true
             summary: "{heading} ({index})"
+        fields:
+          - name: heading
+            type: string
+          - name: text
+            type: rich-text
 content:
   - name: posts
     label: Blog
