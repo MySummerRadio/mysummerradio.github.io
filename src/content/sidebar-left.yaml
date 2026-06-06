@@ -3,3 +3,9 @@ sections:
     text: C'est mon site à moi !
   - heading: Liens
     text: Trucs que j'aime
+sidebar-left:
+  sections:
+    - heading: Me!
+      text: Mon projet solo
+    - heading: Liens
+      text: Autres endroits où me trouver
