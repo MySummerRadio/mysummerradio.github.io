@@ -1,5 +1,6 @@
 ---
 import { getEntry, type CollectionEntry } from "astro:content";
+import { marked } from "marked";
 
 export interface Props {
     id: string;
@@ -16,7 +17,7 @@ const entry: SidebarEntry = await getEntry("sidebars", id);
     entry.data.sections.map((item) => (
         <div>
             <h3>{item.heading}</h3>
-            {item.text}
+            <div set:html={marked(item.text)} />
         </div>
     ))
 }
