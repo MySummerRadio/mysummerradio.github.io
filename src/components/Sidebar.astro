@@ -10,7 +10,11 @@ const { id } = Astro.props;
 
 type SidebarEntry = CollectionEntry<"sidebars">;
 
-const entry: SidebarEntry = await getEntry("sidebars", id);
+const entry = await getEntry("sidebars", id);
+
+if (!entry) {
+    throw new Error(`Sidebar "${id}" not found`);
+}
 ---
 
 {
