@@ -15,7 +15,7 @@ const entry: SidebarEntry = await getEntry("sidebars", id);
 
 {
     entry.data.sections.map((item) => (
-        <div>
+        <div class="box">
             <h3>{item.heading}</h3>
             <div set:html={marked(item.text)} />
         </div>
@@ -23,7 +23,7 @@ const entry: SidebarEntry = await getEntry("sidebars", id);
 }
 
 <style>
-    div {
+    .box {
         background: rgb(256, 256, 256, 0.75);
         color: black;
         padding: 1rem;

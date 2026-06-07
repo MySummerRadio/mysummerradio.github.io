@@ -43,10 +43,10 @@ const pageTitle = "My Summer Radio";
         text-align: center;
         text-transform: uppercase;
         font-size: 3rem;
-        font-weight: 400;
-        text-shadow:
-            0 -0.5rem 1rem white,
-            0 0.5rem 1rem #999;
+        font-weight: 800;
+        animation-name: glow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
     }
 
     .col {
@@ -64,5 +64,19 @@ const pageTitle = "My Summer Radio";
         padding: 1rem;
         box-shadow: 0 0.5rem 1rem #999;
         min-height: 50vh;
+    }
+
+    /* from https://github.com/patriciamolnar/tutorials/tree/master/Variable%20Fonts */
+
+    @keyframes glow {
+        0% {
+            text-shadow: var(--shadow);
+        }
+        50% {
+            text-shadow: var(--shadow2);
+        }
+        100% {
+            text-shadow: var(--shadow);
+        }
     }
 </style>
