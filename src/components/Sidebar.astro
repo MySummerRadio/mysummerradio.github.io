@@ -19,7 +19,7 @@ if (!entry) {
 
 {
     entry.data.sections.map((item) => (
-        <div class="box">
+        <div class="box gradient-sky-field">
             <h3>{item.heading}</h3>
             <div set:html={marked(item.text)} />
         </div>
@@ -28,9 +28,8 @@ if (!entry) {
 
 <style>
     .box {
-        background: rgb(256, 256, 256, 0.75);
-        color: black;
+        color: var(--color-teal-700);
         padding: 1rem;
-        box-shadow: 0 0.5rem 1rem #999;
+        box-shadow: 0 0.5rem 1rem var(--color-teal-700);
     }
 </style>

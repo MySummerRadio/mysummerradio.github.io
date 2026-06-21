@@ -17,7 +17,7 @@ const pageTitle = "My Summer Radio";
             <h2>left col</h2>
             <Sidebar id="sidebar-left" />
         </div>
-        <div class="col center">
+        <div class="col center gradient-sky-field">
             <h2>Blog</h2>
             <Blog />
         </div>
@@ -63,10 +63,9 @@ const pageTitle = "My Summer Radio";
     }
 
     .center {
-        background: rgb(256, 256, 256, 0.8);
-        color: black;
+        color: var(--color-teal-700);
         padding: 1rem;
-        box-shadow: 0 0.5rem 1rem #999;
+        box-shadow: 0 0.5rem 1rem var(--color-teal-700);
         min-height: 50vh;
     }
 

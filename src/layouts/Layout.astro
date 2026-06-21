@@ -22,7 +22,7 @@ const { pageTitle } = Astro.props;
             rel="stylesheet"
         />
     </head>
-    <body>
+    <body class="gradient-bg">
         <Navigation />
         <main>
             <slot />
@@ -37,10 +37,5 @@ const { pageTitle } = Astro.props;
         width: 100%;
         min-height: 100vh;
         font-family: "Bitcount Prop Single Ink", system-ui;
-        background-image: url("/background.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
     }
 </style>
