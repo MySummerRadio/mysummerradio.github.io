@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.3](https://github.com/MySummerRadio/mysummerradio.github.io/compare/v0.0.2...v0.0.3) (2026-06-21)
+
+
+### Features
+
+* add marked to render sidebar text ([b31044f](https://github.com/MySummerRadio/mysummerradio.github.io/commit/b31044f6d8ccfd6a4b4634266f78a464048879b3))
+* add palette from presse pictures ([1d5342a](https://github.com/MySummerRadio/mysummerradio.github.io/commit/1d5342a6b79f00eb5b21b7b0af1aea0cae38c57c))
+* animated shadow on h1 ([e4874dc](https://github.com/MySummerRadio/mysummerradio.github.io/commit/e4874dc9bce2936aa9a2bfd167830f12fb4ec8c4))
+* **dev:** install stylelint ([ffbd5ae](https://github.com/MySummerRadio/mysummerradio.github.io/commit/ffbd5ae0b70f145bafef88f825c42ed13237d47c))
+
+
+### Bug Fixes
+
+* make description optional in zod schema ([5e8403c](https://github.com/MySummerRadio/mysummerradio.github.io/commit/5e8403c08d309764dcc63ffbfbb7f87b147bd794))
+
 ## 0.0.2 (2026-06-07)
 
 
