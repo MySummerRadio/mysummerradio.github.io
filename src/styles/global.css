@@ -2,7 +2,6 @@
 @import url("./claude-palette.css");
 
 :root {
-    --background-color: var(--color-off-white);
     --bl: var(--color-teal-700);
     --c1: var(--color-orange-600);
     --c2: var(--color-orange-800);
@@ -12,4 +11,8 @@
     --shadow2:
         0 0 5px #fff, 0 0 20px #fff, 0 0 15px var(--c2), 0 0 45px var(--c2),
         0 0 70px var(--c2), 0 0 100px var(--c2), 0 0 150px var(--c2);
+}
+
+:is(h1, h2, h3) {
+    color: var(--color-orange-600);
 }

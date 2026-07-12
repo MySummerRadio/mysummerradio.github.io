@@ -78,8 +78,8 @@
     background: linear-gradient(
         180deg,
         var(--color-sky-blue) 0%,
-        var(--color-pale-cloud-blue) 35%,
-        var(--color-electric-yellow-green) 60%,
+        var(--color-pale-cloud-blue) 65%,
+        var(--color-electric-yellow-green) 80%,
         var(--color-deep-lime-green) 100%
     );
 }
