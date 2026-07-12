@@ -1,6 +1,6 @@
 ---
 import { getEntry, type CollectionEntry } from "astro:content";
-import { marked } from "marked";
+import { markdownToHtml } from "satteri";
 
 export interface Props {
     id: string;
@@ -19,17 +19,17 @@ if (!entry) {
 
 {
     entry.data.sections.map((item) => (
-        <div class="box gradient-sky-field">
+        <div class="box gradient-bg">
             <h3>{item.heading}</h3>
-            <div set:html={marked(item.text)} />
+            <div set:html={markdownToHtml(item.text).html} />
         </div>
     ))
 }
 
 <style>
     .box {
-        color: var(--color-teal-700);
+        color: var(--color-teal-800);
         padding: 1rem;
-        box-shadow: 0 0.5rem 1rem var(--color-teal-700);
+        box-shadow: 0 0.5rem 1rem var(--color-teal-100);
     }
 </style>
