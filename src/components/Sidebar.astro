@@ -19,17 +19,9 @@ if (!entry) {
 
 {
     entry.data.sections.map((item) => (
-        <div class="box gradient-bg">
+        <div class="box">
             <h3>{item.heading}</h3>
             <div set:html={markdownToHtml(item.text).html} />
         </div>
     ))
 }
-
-<style>
-    .box {
-        color: var(--color-teal-800);
-        padding: 1rem;
-        box-shadow: 0 0.5rem 1rem var(--color-teal-100);
-    }
-</style>

@@ -14,5 +14,52 @@
 }
 
 :is(h1, h2, h3) {
-    color: var(--color-orange-600);
+    color: var(--color-teal-400);
+}
+
+.box {
+    color: var(--color-teal-800);
+    background-color: rgb(255, 255, 255, 0.333);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.5rem solid var(--green-pale);
+    box-shadow: 0 0.5rem 1rem var(--color-teal-100);
+    z-index: 100;
+}
+
+:root {
+  --green-dark:  oklch(68% 0.19 142);
+  --green-mid:   oklch(80% 0.19 138);
+  --green-light: oklch(90% 0.13 135);
+  --green-pale:  oklch(96% 0.06 132);
+  --white-glow:  oklch(98% 0.02 130);
+}
+
+.hero-background {
+  background:
+    radial-gradient(circle at 30% 55%, var(--white-glow) 0%, transparent 45%),
+    linear-gradient(
+      100deg,
+      var(--green-dark) 0%,
+      var(--green-mid) 30%,
+      var(--green-light) 55%,
+      var(--green-pale) 70%,
+      var(--green-mid) 100%
+    );
+  background-blend-mode: screen;
+}
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -8deg,
+    oklch(100% 0 0 / 0.15) 0px,
+    oklch(100% 0 0 / 0.15) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
 }
