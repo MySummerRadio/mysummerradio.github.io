@@ -1,50 +1,30 @@
 @import url("./reset.css");
 @import url("./claude-palette.css");
 
-:root {
-    --bl: var(--color-teal-700);
-    --c1: var(--color-orange-600);
-    --c2: var(--color-orange-800);
-    --shadow:
-        0 0 5px #fff, 0 0 15px #fff, 0 0 30px var(--c1), 0 0 45px var(--c1),
-        0 0 70px var(--c1), 0 0 100px var(--c1), 0 0 150px var(--c1);
-    --shadow2:
-        0 0 5px #fff, 0 0 20px #fff, 0 0 15px var(--c2), 0 0 45px var(--c2),
-        0 0 70px var(--c2), 0 0 100px var(--c2), 0 0 150px var(--c2);
-}
-
 :is(h1, h2, h3) {
-    color: var(--color-teal-400);
+    color: oklch(var(--color-teal-400));
 }
 
 .box {
-    color: var(--color-teal-800);
-    background-color: rgb(255, 255, 255, 0.333);
+    color: oklch(var(--color-teal-800));
+    background-color: oklch(var(--white-glow) / 40%);
     padding: 1rem;
     border-radius: 0.5rem;
-    border: 0.5rem solid var(--green-pale);
-    box-shadow: 0 0.5rem 1rem var(--color-teal-100);
+    border: 0.5rem solid oklch(var(--color-chartreuse-lime));
+    box-shadow: 0 0.5rem 1rem oklch(var(--white-glow));
     z-index: 100;
-}
-
-:root {
-  --green-dark:  oklch(68% 0.19 142);
-  --green-mid:   oklch(80% 0.19 138);
-  --green-light: oklch(90% 0.13 135);
-  --green-pale:  oklch(96% 0.06 132);
-  --white-glow:  oklch(98% 0.02 130);
 }
 
 .hero-background {
   background:
-    radial-gradient(circle at 30% 55%, var(--white-glow) 0%, transparent 45%),
+    radial-gradient(circle at 30% 55%, oklch(var(--white-glow)) 0%, transparent 45%),
     linear-gradient(
       100deg,
-      var(--green-dark) 0%,
-      var(--green-mid) 30%,
-      var(--green-light) 55%,
-      var(--green-pale) 70%,
-      var(--green-mid) 100%
+      oklch(var(--gradient-lime-1)) 0%,
+      oklch(var(--gradient-lime-4)) 30%,
+      oklch(var(--gradient-lime-3)) 55%,
+      oklch(var(--gradient-lime-2)) 70%,
+      oklch(var(--gradient-lime-4)) 100%
     );
   background-blend-mode: screen;
 }
