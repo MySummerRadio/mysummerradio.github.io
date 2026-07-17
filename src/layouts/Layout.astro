@@ -3,6 +3,8 @@ import "../styles/global.css";
 import background from "../assets/background.svg";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import SvgAssets from "../components/SvgAssets.astro";
+
 const { pageTitle } = Astro.props;
 ---
 
@@ -22,10 +24,12 @@ const { pageTitle } = Astro.props;
             rel="stylesheet"
         />
     </head>
-    <body class="hero-background">
+    <body>
+        <SvgAssets />
         <main>
             <slot />
         </main>
+        <footer></footer>
     </body>
 </html>
 
@@ -37,5 +41,24 @@ const { pageTitle } = Astro.props;
         min-height: 100vh;
         font-family: "Share Tech", system-ui;
         color: var(--color-teal-700);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        background: linear-gradient(
+            to bottom,
+            #fff,
+            var(--sky-color) 20%,
+            var(--sky-color) 80%,
+            var(--sky-color-light) 90%
+        );
+    }
+
+    footer {
+        clip-path: url(#clip-grass);
+        background: linear-gradient(
+            to bottom,
+            var(--grass-color),
+            var(--grass-color-dark)
+        );
+        min-height: 10vh;
     }
 </style>

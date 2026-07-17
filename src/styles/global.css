@@ -1,45 +1,33 @@
 @import url("./reset.css");
 @import url("./claude-palette.css");
 
-:is(h1, h2, h3) {
-    color: oklch(var(--color-teal-400));
+:root {
+    --sky-color: oklch(0.842 0.079 245.947);
+    --sky-color-light: oklch(0.9 0.05 245.947);
+    --grass-color: oklch(0.727 0.175 131.283);
+    --grass-color-dark: oklch(0.6 0.175 131.283);
+    --pink: oklch(0.863 0.109 334.691);
+}
+
+@font-face {
+    font-family: aoharu;
+    src: url("./assets/aoharu-marker-mini.ttf") format("truetype"),
+         url("./assets/aoharu-marker-mini.woff") format("woff");
+}
+
+h1, h2, h3 {
+    color: var(--grass-color-dark);
+    font-family: aoharu;
+}
+
+img.logo {
+    margin: 0 auto;
 }
 
 .box {
-    color: oklch(var(--color-teal-800));
-    background-color: oklch(var(--white-glow) / 40%);
+    background-color: white;
     padding: 1rem;
-    border-radius: 0.5rem;
-    border: 0.5rem solid oklch(var(--color-chartreuse-lime));
-    box-shadow: 0 0.5rem 1rem oklch(var(--white-glow));
-    z-index: 100;
-}
-
-.hero-background {
-  background:
-    radial-gradient(circle at 30% 55%, oklch(var(--white-glow)) 0%, transparent 45%),
-    linear-gradient(
-      100deg,
-      oklch(var(--gradient-lime-1)) 0%,
-      oklch(var(--gradient-lime-4)) 30%,
-      oklch(var(--gradient-lime-3)) 55%,
-      oklch(var(--gradient-lime-2)) 70%,
-      oklch(var(--gradient-lime-4)) 100%
-    );
-  background-blend-mode: screen;
-}
-
-.hero-background::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    -8deg,
-    oklch(100% 0 0 / 0.15) 0px,
-    oklch(100% 0 0 / 0.15) 2px,
-    transparent 2px,
-    transparent 6px
-  );
-  mix-blend-mode: overlay;
-  pointer-events: none;
+    border-radius: 4px;
+    border: 8px solid white;
+    box-shadow: 8px 8px 0 var(--pink);
 }

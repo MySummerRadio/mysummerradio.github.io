@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Blog from "../components/Blog.astro";
 import Sidebar from "../components/Sidebar.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo-white.webp";
 
 import { getCollection, type CollectionEntry } from "astro:content";
 type SidebarEntry = CollectionEntry<"sidebars">;
@@ -11,8 +13,8 @@ const pageTitle = "My Summer Radio";
 ---
 
 <Layout pageTitle={pageTitle}>
+    <Image src={logo} class="logo" alt="my summer radio logo" width="800" />
     <div class="container">
-        <h1>Welcome to My Summer Radio :)</h1>
         <div class="col left">
             <h2>left col</h2>
             <Sidebar id="sidebar-left" />
