@@ -2,11 +2,21 @@
 @import url("./claude-palette.css");
 
 :root {
-    --sky-color: oklch(0.842 0.079 245.947);
-    --sky-color-light: oklch(0.9 0.05 245.947);
-    --grass-color: oklch(0.727 0.175 131.283);
-    --grass-color-dark: oklch(0.6 0.175 131.283);
-    --pink: oklch(0.863 0.109 334.691);
+    --sky-color: oklch(84.2% 0.079 245.947deg);
+    --sky-color-light: oklch(90% 0.05 245.947deg);
+    --grass-color: oklch(72.7% 0.175 131.283deg);
+    --grass-color-dark: oklch(60% 0.175 131.283deg);
+
+    /* Complementary color of --sky-color */
+    --earth-color: oklch(28% 0.06% 71.491deg); /* #3b2300 */
+
+    /* triadic paletton */
+    --white: oklch(100% 0 0deg);
+    --pink: oklch(86.3% 0.109 334.691deg);
+    --yellow: oklch(96.1% 0.138 105.627deg);
+    --green: oklch(92% 0.177 136.335deg);
+    --text-color: var(--earth-color);
+    --player-btn-bg: var(--sky-color-light);
 }
 
 @font-face {
@@ -17,17 +27,33 @@
 
 h1, h2, h3 {
     color: var(--grass-color-dark);
-    font-family: aoharu;
+    font-family: "Zen Loop", cursive;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    text-shadow: var(--pink) 1px 0 10px;
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 img.logo {
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 .box {
-    background-color: white;
+    background-color: #a1d1fccc;
     padding: 1rem;
-    border-radius: 4px;
-    border: 8px solid white;
+    border-radius: 2px;
     box-shadow: 8px 8px 0 var(--pink);
+    border: 8px solid var(--white);
 }
