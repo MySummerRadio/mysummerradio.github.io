@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.4](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.3...v0.0.4) (2026-07-19)
+
+### Features
+
+* import styling from ringtone temp page ([fbc53bc](https://github.com/MySummerRadio/mysummerradio/commit/fbc53bc80138c18a94d178eb39aa3b6c918bb556))
+
+### Bug Fixes
+
+* astro 7 and new satteri md, remove marked ([8b211ca](https://github.com/MySummerRadio/mysummerradio/commit/8b211ca44d5ee7686af77f4953ee92ec807f188a))
+* crop logo, add colors ([279bfb8](https://github.com/MySummerRadio/mysummerradio/commit/279bfb8add20dbb044d755d45d54e52be1d41046))
 ## [0.0.3](https://github.com/MySummerRadio/mysummerradio.github.io/compare/v0.0.2...v0.0.3) (2026-06-21)
 
 
