@@ -4,8 +4,9 @@ import background from "../assets/background.svg";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import SvgAssets from "../components/SvgAssets.astro";
+import Silhouette from "../assets/images/silhouette.svg";
 
-const { pageTitle } = Astro.props;
+const { pageTitle, className } = Astro.props;
 ---
 
 <!doctype html>
@@ -25,6 +26,7 @@ const { pageTitle } = Astro.props;
         />
         <!-- Matomo -->
         <script>
+            // @ts-expect-error
             var _paq = (window._paq = window._paq || []);
             /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
             _paq.push([
@@ -42,31 +44,35 @@ const { pageTitle } = Astro.props;
                     s = d.getElementsByTagName("script")[0];
                 g.async = true;
                 g.src = u + "matomo.js";
+                // @ts-expect-error
                 s.parentNode.insertBefore(g, s);
             })();
         </script>
         <!-- End Matomo Code -->
     </head>
-    <body>
+    <body class:list={[className]}>
         <SvgAssets />
         <main>
             <slot />
         </main>
+        <figure class="silhouette">
+            <Silhouette height="35vh" style="fill: var(--white);" />
+        </figure>
         <footer></footer>
     </body>
 </html>
 
-<style>
-    html,
+<style is:global>
     body {
         margin: 0;
         width: 100%;
         min-height: 100vh;
-        font-family: "Sansation", system-ui;
+        font-family: "aoharu", cursive;
         font-weight: 300;
         color: var(--earth-color);
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-columns: repeat(12, minmax(10px, 1fr));
+        grid-template-rows: repeat(6, minmax(10px, 1fr));
         background: linear-gradient(
             to bottom,
             #fff,
@@ -76,13 +82,44 @@ const { pageTitle } = Astro.props;
         );
     }
 
+    main {
+        display: grid;
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 5;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+    }
+
+    .home main {
+        grid-template-areas:
+            "logo logo logo logo logo logo . . menu1 menu1 menu1 ."
+            "logo logo logo logo logo logo . . . . . ."
+            ". . . . . . menu2 menu2 menu2 . . ."
+            "menu4 menu4 menu4 menu3 menu3 menu3 . . . . . ."
+            ". . . . . . . . . . . .";
+    }
+
+    .home .silhouette {
+        grid-column: 10 / span 2;
+        grid-row: 4 / span 3;
+        place-self: center;
+        /*height: 20vh;*/
+        z-index: 10;
+    }
+
     footer {
+        grid-column: 1 / span 12;
+        grid-row: 6 / span 1;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: auto;
+
         clip-path: url(#clip-grass);
         background: linear-gradient(
             to bottom,
             var(--grass-color),
             var(--grass-color-dark)
         );
-        min-height: 10vh;
+        height: 100%;
     }
 </style>

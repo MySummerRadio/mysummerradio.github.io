@@ -1,10 +1,9 @@
 @import url("./reset.css");
-@import url("./claude-palette.css");
 
 :root {
-    --sky-color: oklch(84.2% 0.079 245.947deg);
+    --sky-color: oklch(84.2% 0.079 245.947deg); /* #a1d1fc */
     --sky-color-light: oklch(90% 0.05 245.947deg);
-    --grass-color: oklch(72.7% 0.175 131.283deg);
+    --grass-color: oklch(72.7% 0.175 131.283deg); /* 7ebc35 */
     --grass-color-dark: oklch(60% 0.175 131.283deg);
 
     /* Complementary color of --sky-color */
@@ -25,35 +24,33 @@
          url("./assets/aoharu-marker-mini.woff") format("woff");
 }
 
-h1, h2, h3 {
-    color: var(--grass-color-dark);
-    font-family: "Zen Loop", cursive;
-    font-weight: 400;
-    letter-spacing: 0.1em;
+:where([data-astro-image]) {
+  object-fit: var(--fit);
+  object-position: var(--pos);
+}
+
+:where([data-astro-image='full-width']) {
+  width: 100%;
+}
+
+:where([data-astro-image='constrained']) {
+  max-width: 100%;
 }
 
 h1 {
-    font-size: 3rem;
-}
-
-h2 {
+    font-family: aoharu, cursive;
     font-size: 2.5rem;
-    color: var(--white);
-    text-shadow: var(--pink) 1px 0 10px;
+    font-weight: 400;
 }
 
-h3 {
-    font-size: 2rem;
-}
+a {
+    text-decoration: none;
+    text-underline-offset: 0.2ch;
 
-img.logo {
-    margin: 2rem auto;
-}
-
-.box {
-    background-color: #a1d1fccc;
-    padding: 1rem;
-    border-radius: 2px;
-    box-shadow: 8px 8px 0 var(--pink);
-    border: 8px solid var(--white);
+    &:hover {
+        text-decoration: underline;
+        color: var(--white);
+        text-decoration-color: var(--white);
+        text-decoration-thickness: 2px;
+    }
 }
