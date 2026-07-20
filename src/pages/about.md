@@ -1,6 +1,7 @@
 ---
-layout: ../layouts/PostLayout.astro
+layout: ../layouts/Layout.astro
 title: À propos
+className: post
 ---
 # À propos
 

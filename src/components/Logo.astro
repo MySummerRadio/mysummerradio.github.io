@@ -15,6 +15,7 @@ const { home } = Astro.props;
             id="logo"
             style="--fit: contain; --pos: center; min-width: 0; min-height: 0; overflow: hidden;"
             height="300"
+            transition:name="logo"
         />
     ) : (
         <a id="logo" href="/">
@@ -25,6 +26,7 @@ const { home } = Astro.props;
                 class="logo"
                 style="--fit: contain; --pos: center; min-width: 0; min-height: 0; overflow: hidden;"
                 height="300"
+                transition:name="logo"
             />
         </a>
     )

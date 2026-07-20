@@ -1,10 +1,16 @@
 @import url("./reset.css");
 
+@font-face {
+    font-family: aoharu;
+    src: url("/assets/aoharu-marker-mini.ttf") format("truetype"),
+         url("/assets/aoharu-marker-mini.woff") format("woff");
+}
+
 :root {
     --sky-color: oklch(84.2% 0.079 245.947deg); /* #a1d1fc */
-    --sky-color-light: oklch(90% 0.05 245.947deg);
     --grass-color: oklch(72.7% 0.175 131.283deg); /* 7ebc35 */
-    --grass-color-dark: oklch(60% 0.175 131.283deg);
+    --sky-color-light: oklch(from var(--sky-color) calc(l + 0.06) calc(c - 0.03) h);
+    --grass-color-dark: oklch(from var(--grass-color) calc(l - 0.12) calc(c + 0.03) h);
 
     /* Complementary color of --sky-color */
     --earth-color: oklch(28% 0.06% 71.491deg); /* #3b2300 */
@@ -14,14 +20,10 @@
     --pink: oklch(86.3% 0.109 334.691deg);
     --yellow: oklch(96.1% 0.138 105.627deg);
     --green: oklch(92% 0.177 136.335deg);
-    --text-color: var(--earth-color);
-    --player-btn-bg: var(--sky-color-light);
-}
 
-@font-face {
-    font-family: aoharu;
-    src: url("./assets/aoharu-marker-mini.ttf") format("truetype"),
-         url("./assets/aoharu-marker-mini.woff") format("woff");
+    /* font family */
+    --title-font: aoharu, cursive;
+    --text-font: "Sansation", system-ui, sans-serif;
 }
 
 :where([data-astro-image]) {
@@ -38,7 +40,7 @@
 }
 
 h1 {
-    font-family: aoharu, cursive;
+    font-family: var(--title-font);
     font-size: 2.5rem;
     font-weight: 400;
 }
