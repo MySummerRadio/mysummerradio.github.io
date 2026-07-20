@@ -18,7 +18,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const pageTitle = post.data.title;
 const className = "post";
-console.log(post);
 ---
 
 <Layout title={pageTitle} className={className}>
@@ -29,4 +28,8 @@ console.log(post);
     </div>
 </Layout>
 
-<style></style>
+<style>
+    .content {
+        overflow: scroll;
+    }
+</style>

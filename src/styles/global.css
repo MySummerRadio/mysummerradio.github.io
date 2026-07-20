@@ -41,9 +41,12 @@
 
 h1 {
     font-family: var(--title-font);
-    font-size: 2.5rem;
+
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1240,27—48 */
+    font-size: clamp(27px, 19.6957px + 2.2826vw, 48px);
     font-weight: 400;
 }
+
 
 .menu-link {
     text-decoration: none;
