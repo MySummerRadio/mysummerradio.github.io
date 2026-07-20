@@ -67,16 +67,17 @@ const { pageTitle, className } = Astro.props;
         margin: 0;
         width: 100%;
         min-height: 100vh;
-        font-family: "aoharu", cursive;
+        font-family: "Zen Loop", sans-serif;
         font-weight: 300;
+        font-size: 1.5rem;
         color: var(--earth-color);
         display: grid;
         grid-template-columns: repeat(12, minmax(10px, 1fr));
-        grid-template-rows: repeat(6, minmax(10px, 1fr));
+        grid-template-rows: repeat(5, minmax(10px, 1fr)) 15vh;
         background: linear-gradient(
             to bottom,
             #fff,
-            var(--sky-color) 20%,
+            var(--sky-color) 10%,
             var(--sky-color) 80%,
             var(--sky-color-light) 90%
         );
@@ -90,20 +91,56 @@ const { pageTitle, className } = Astro.props;
         grid-template-rows: subgrid;
     }
 
-    .home main {
-        grid-template-areas:
-            "logo logo logo logo logo logo . . menu1 menu1 menu1 ."
-            "logo logo logo logo logo logo . . . . . ."
-            ". . . . . . menu2 menu2 menu2 . . ."
-            "menu4 menu4 menu4 menu3 menu3 menu3 . . . . . ."
-            ". . . . . . . . . . . .";
+    .home {
+        & main {
+            grid-template-areas:
+                "logo logo logo logo logo logo . . menu1 menu1 menu1 ."
+                "logo logo logo logo logo logo . . . . . ."
+                ". . . . . . menu2 menu2 menu2 . . ."
+                "menu4 menu4 menu4 menu3 menu3 menu3 . . . . . ."
+                ". . . . . . . . . . . .";
+        }
     }
 
-    .home .silhouette {
+    .blog {
+        & main {
+            grid-template-areas:
+                "logo logo logo logo . . . . . . . ."
+                "logo logo logo logo . . . . . . . ."
+                ". . . list list list list list list  . . ."
+                ". . . list list list list list list  . . ."
+                ". . . . . . . . . . . .";
+        }
+
+        & #logo {
+            /*filter: drop-shadow(0 0 1px var(--earth-color));*/
+        }
+    }
+
+    .post {
+        & main {
+            grid-template-areas:
+                "logo logo logo logo . . . . . . . ."
+                "logo logo logo logo . . . . . . . ."
+                ". . . content content content content content content  . . ."
+                ". . . content content content content content content  . . ."
+                ". . . . . . . . . . . .";
+        }
+
+        & #content {
+            grid-area: content;
+        }
+    }
+
+    #logo {
+        grid-area: logo;
+    }
+
+    :is(.home, .blog, .post) .silhouette {
         grid-column: 10 / span 2;
         grid-row: 4 / span 3;
-        place-self: center;
-        /*height: 20vh;*/
+        place-self: end center;
+        padding-block-end: 4vh;
         z-index: 10;
     }
 

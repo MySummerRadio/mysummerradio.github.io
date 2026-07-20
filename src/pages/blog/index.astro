@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
+import Logo from "../../components/Logo.astro";
 
 type BlogEntry = CollectionEntry<"blog">;
 
@@ -10,10 +11,13 @@ const posts = (await getCollection("blog"))
         (a: BlogEntry, b: BlogEntry): number =>
             b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
     );
+const pageTitle = "My Summer Blog";
+const className = "blog";
 ---
 
-<Layout>
-    <ul>
+<Layout pageTitle={pageTitle} className={className}>
+    <Logo />
+    <ul id="list">
         {
             posts.map((post: BlogEntry) => (
                 <li>
@@ -25,3 +29,15 @@ const posts = (await getCollection("blog"))
         }
     </ul>
 </Layout>
+
+<style>
+    #logo {
+        padding-block-start: 2vw;
+        padding-inline-start: 2vw;
+        place-self: center end;
+    }
+
+    #list {
+        grid-area: list;
+    }
+</style>

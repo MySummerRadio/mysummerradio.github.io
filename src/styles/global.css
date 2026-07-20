@@ -43,12 +43,12 @@ h1 {
     font-weight: 400;
 }
 
-a {
+.menu-link {
     text-decoration: none;
-    text-underline-offset: 0.2ch;
 
     &:hover {
         text-decoration: underline;
+        text-underline-offset: 0.1ch;
         color: var(--white);
         text-decoration-color: var(--white);
         text-decoration-thickness: 2px;
