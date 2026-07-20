@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.5](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.4...v0.0.5) (2026-07-20)
+
+### Features
+
+* all pages with layout, logo as component ([329ada9](https://github.com/MySummerRadio/mysummerradio/commit/329ada9366d15954588b4e117aef1bc46f07ae34))
+* great new homepage ([0c144b9](https://github.com/MySummerRadio/mysummerradio/commit/0c144b95dbf787811c1b69319e354afd08cb8e55))
 ## [0.0.4](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.3...v0.0.4) (2026-07-19)
 
 ### Features
