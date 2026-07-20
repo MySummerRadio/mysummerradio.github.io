@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.5...v0.0.6) (2026-07-20)
+
+### Features
+
+* add real image to grass footer ([39d056a](https://github.com/MySummerRadio/mysummerradio/commit/39d056a64e50f7cd592dac19e4e3fa8fe6bb789e))
+* add rss feed to blog ([7017c0c](https://github.com/MySummerRadio/mysummerradio/commit/7017c0cb8b9497b3f257c91f72476bbb9dd1fc73))
+* add slow cloud to bg ([ee2c010](https://github.com/MySummerRadio/mysummerradio/commit/ee2c010ade7c403f3c082fa4015a41c09608b074))
 ## [0.0.5](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.4...v0.0.5) (2026-07-20)
 
 ### Features
