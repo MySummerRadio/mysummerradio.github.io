@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.7](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.6...v0.0.7) (2026-07-21)
+
+### Features
+
+* clever, use display: content to target the menu items only on desktop ([f247a83](https://github.com/MySummerRadio/mysummerradio/commit/f247a830dc2d719f3425c4dc37d7c0f406a3f04a))
+
+### Bug Fixes
+
+* better cloud drift ([4f376b6](https://github.com/MySummerRadio/mysummerradio/commit/4f376b6d216411ac7f15d9b1dc9f6fba336f0df1))
+* footer postion fixed, factor out components, add gap to grid ([4341dfa](https://github.com/MySummerRadio/mysummerradio/commit/4341dfaf48ba8f170b1e3fa96a71e63d0174febc))
+* pixel pushing on mobile, overscroll ([2f7c4fe](https://github.com/MySummerRadio/mysummerradio/commit/2f7c4fe9e8100a0703d9f87c1f6c023ef4e76819))
+* starting to be responsive with grid and clamp ([0f003f6](https://github.com/MySummerRadio/mysummerradio/commit/0f003f6aafe74a6df01172419c0a3df539ba2eb4))
 ## [0.0.6](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.5...v0.0.6) (2026-07-20)
 
 ### Features
