@@ -109,6 +109,13 @@ const { pageTitle, className } = Astro.props;
         --grid-row-height: minmax(10px, 14.6667vh);
 
         & main {
+            margin-inline: 2vw;
+
+            .menu {
+                /* so that I can use grid-area on the menu items, set it to flex on mobile */
+                display: contents;
+            }
+
             grid-template-areas:
                 "logo logo logo logo logo logo . . menu1 menu1 menu1 ."
                 "logo logo logo logo logo logo . . . . . ."
@@ -119,15 +126,23 @@ const { pageTitle, className } = Astro.props;
             @media (max-width: 768px) {
                 grid-template-areas:
                     ". logo logo logo logo logo logo logo logo logo logo ."
-                    ". . . menu1 menu1 menu1 . . . . . ."
-                    ". menu2 menu2 menu2 . . . . . . . ."
-                    ". . . menu3 menu3 menu3 . . . . . ."
-                    ". menu4 menu4 menu4 . . . . . . . .";
+                    ". . menu menu menu menu menu . . . . ."
+                    ". . menu menu menu menu menu . . . . ."
+                    ". . menu menu menu menu menu . . . . ."
+                    ". . menu menu menu menu menu . . . . .";
+
+                .menu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    grid-area: menu;
+                }
 
                 :is(#menu1, #menu2, #menu3, #menu4) {
                     padding: 0;
                     place-self: start;
                     z-index: 100;
+                    grid-area: unset;
                 }
             }
         }
