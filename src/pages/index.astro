@@ -11,7 +11,7 @@ const className = "home";
 
 <Layout pageTitle={pageTitle} className={className}>
     <Logo home />
-    <div class="menu">
+    <nav class="menu">
         <div id="menu1">
             <a class="menu-link" href="/blog"><h1>Blog</h1></a>
         </div>
@@ -20,7 +20,7 @@ const className = "home";
         </div>
         <div id="menu3"><a class="menu-link" href="#"><h1>Stuff</h1></a></div>
         <div id="menu4"><a class="menu-link" href="#"><h1>Reviews</h1></a></div>
-    </div>
+    </nav>
 </Layout>
 
 <style is:global>
@@ -36,7 +36,7 @@ const className = "home";
 
     #menu3 {
         grid-area: menu3;
-        place-self: end;
+        place-self: start center;
     }
 
     #menu4 {
