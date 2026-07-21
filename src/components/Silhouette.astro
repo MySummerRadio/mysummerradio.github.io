@@ -1,0 +1,22 @@
+---
+import Silhouette from "../assets/images/silhouette.svg";
+---
+
+<figure class="silhouette">
+    <Silhouette height="33.333vh" style="fill: var(--white);" />
+</figure>
+
+<style>
+    .silhouette {
+        position: fixed;
+        bottom: 3vh;
+        right: 10vh;
+        z-index: 10;
+
+        @media (max-width: 768px) {
+            bottom: 1vh;
+            right: 5vh;
+            transform: scale(0.6667);
+        }
+    }
+</style>

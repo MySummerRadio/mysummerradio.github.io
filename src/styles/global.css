@@ -23,7 +23,7 @@
 
     /* font family */
     --title-font: aoharu, cursive;
-    --text-font: "Sansation", system-ui, sans-serif;
+    --text-font: "Barlow", system-ui, sans-serif;
 }
 
 :where([data-astro-image]) {

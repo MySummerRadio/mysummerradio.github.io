@@ -2,10 +2,10 @@
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import Background from "../assets/images/foregrounds_99.webp";
-import Cloud from "../assets/images/realistic-cloud_2.avif";
 import SvgAssets from "../components/SvgAssets.astro";
-import Silhouette from "../assets/images/silhouette.svg";
+import Background from "../assets/images/foregrounds_99.webp";
+import Cloud from "../components/Cloud.astro";
+import Silhouette from "../components/Silhouette.astro";
 
 const { pageTitle, className } = Astro.props;
 ---
@@ -22,7 +22,7 @@ const { pageTitle, className } = Astro.props;
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Loop:ital@0;1&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
 
@@ -55,19 +55,11 @@ const { pageTitle, className } = Astro.props;
     </head>
     <body class:list={[className]}>
         <SvgAssets />
-        <Image
-            src={Cloud}
-            id="cloud"
-            alt=""
-            style="position: absolute; top: 25%; left: 0; z-index: -10;"
-            priority
-        />
+        <Cloud />
         <main>
             <slot />
         </main>
-        <figure class="silhouette">
-            <Silhouette height="33.333vh" style="fill: var(--white);" />
-        </figure>
+        <Silhouette />
         <footer>
             <Image
                 src={Background}
@@ -82,6 +74,7 @@ const { pageTitle, className } = Astro.props;
 <style is:global>
     body {
         --text-color: var(--earth-color);
+        --grid-row-height: auto;
 
         margin: 0;
         width: 100%;
@@ -92,11 +85,12 @@ const { pageTitle, className } = Astro.props;
         color: var(--text-color);
         display: grid;
         grid-template-columns: repeat(12, minmax(10px, 1fr));
-        grid-template-rows: repeat(5, minmax(10px, 16.6667vh)) 1fr;
+        grid-template-rows: repeat(5, var(--grid-row-height)) 1fr;
+        gap: 2vw;
         background: linear-gradient(
             to bottom,
             #fff,
-            var(--sky-color) 10%,
+            var(--sky-color) 15%,
             var(--sky-color) 80%,
             var(--sky-color-light) 90%
         );
@@ -111,6 +105,9 @@ const { pageTitle, className } = Astro.props;
     }
 
     .home {
+        /* changed from 16 to 14 because of grid gap 2 */
+        --grid-row-height: minmax(10px, 14.6667vh);
+
         & main {
             grid-template-areas:
                 "logo logo logo logo logo logo . . menu1 menu1 menu1 ."
@@ -181,6 +178,7 @@ const { pageTitle, className } = Astro.props;
 
         & #content {
             grid-area: content;
+            margin-block-end: 16.6667vh;
         }
     }
 
@@ -191,42 +189,13 @@ const { pageTitle, className } = Astro.props;
         place-self: center end;
     }
 
-    :is(.home, .blog, .post) .silhouette {
-        grid-column: 10 / span 2;
-        grid-row: 4 / span 3;
-        place-self: end center;
-        padding-block-end: 4vh;
-        z-index: 10;
-
-        @media (max-width: 768px) {
-            place-self: end;
-            padding-block-end: 1vh;
-            transform: scale(0.6667);
-        }
-    }
-
-    #cloud {
-        transform: scale(0.8) translate(10vw, 0);
-        animation: cloud-drift 30s ease-in-out infinite;
-    }
-
-    @keyframes cloud-drift {
-        0%,
-        15% {
-            transform: scale(0.8) translate(10vw, 0);
-            animation-timing-function: ease-in-out;
-        }
-        50% {
-            transform: scale(0.84) translate(10.5vw, -0.5vh);
-            animation-timing-function: ease-in-out;
-        }
-        85%,
-        100% {
-            transform: scale(0.8) translate(10vw, 0);
-        }
-    }
-
     footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 16.65vh;
+        overflow: hidden;
         grid-column: 1 / span 12;
         grid-row: 6 / span 1;
         display: grid;
@@ -239,8 +208,6 @@ const { pageTitle, className } = Astro.props;
             var(--grass-color),
             var(--grass-color-dark) 45%
         );
-        height: 16.65vh;
-        overflow: hidden;
 
         & img {
             grid-column: 1 / -1;

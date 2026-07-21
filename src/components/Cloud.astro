@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import Cloud from "../assets/images/realistic-cloud_2.avif";
+---
+
+<Image
+    src={Cloud}
+    id="cloud"
+    alt=""
+    style="position: absolute; top: 25%; left: 0; z-index: -10;"
+    priority
+/>
+
+<style>
+    #cloud {
+        transform: scale(0.8) translate(10vw, 0);
+        animation: cloud-drift 30s ease-in-out infinite;
+    }
+
+    @keyframes cloud-drift {
+        0%,
+        15% {
+            transform: scale(0.8) translate(10vw, 0);
+            animation-timing-function: ease-in-out;
+        }
+        50% {
+            transform: scale(0.84) translate(10.5vw, -0.5vh);
+            animation-timing-function: ease-in-out;
+        }
+        85%,
+        100% {
+            transform: scale(0.8) translate(10vw, 0);
+        }
+    }
+</style>
