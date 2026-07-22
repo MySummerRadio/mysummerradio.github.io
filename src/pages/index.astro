@@ -12,18 +12,67 @@ const className = "home";
 <Layout pageTitle={pageTitle} className={className}>
     <Logo home />
     <nav class="menu">
-        <div id="menu1">
-            <a class="menu-link" href="/blog"><h1>Blog</h1></a>
+        <div id="menu1" data-label="blog">
+            <a href="/blog">BLOG</a>
         </div>
-        <div id="menu2">
-            <a class="menu-link" href="#"><h1>Downloads</h1></a>
+        <div id="menu2" data-label="downloads">
+            <a href="#">DOWNLOADS</a>
         </div>
-        <div id="menu3"><a class="menu-link" href="#"><h1>Stuff</h1></a></div>
-        <div id="menu4"><a class="menu-link" href="#"><h1>Reviews</h1></a></div>
+        <div id="menu3" data-label="stuff"><a href="#">STUFF</a></div>
+        <div id="menu4" data-label="reviews"><a href="#">REVIEWS</a></div>
     </nav>
 </Layout>
 
 <style is:global>
+    .menu {
+        & > * {
+            position: relative;
+
+            /* @link https://utopia.fyi/clamp/calculator?a=320,1240,27—48 */
+            --raw-fs: clamp(27px, 19.6957px + 2.2826vw, 48px);
+
+            /* https://ishadeed.com/article/css-round/ */
+            font-size: round(down, var(--raw-fs), 2px);
+            font-family: var(--title-font);
+            font-weight: bold;
+            font-synthesis: weight;
+            color: var(--dark-blue);
+            /*letter-spacing: -0.35ch;*/
+            transition: text-shadow 0.3s ease;
+
+            & a {
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-shadow: 0 0 0.2em var(--white);
+
+                &::after {
+                    color: oklch(from var(--white) l c h / 1);
+                    filter: blur(0);
+                }
+            }
+
+            &::after {
+                position: absolute;
+                top: 0.2lh;
+                left: 5vw;
+                content: attr(data-label);
+                font-size: 0.8lh;
+                font-family: var(--text-font);
+                font-weight: 900;
+                color: oklch(from var(--white) l c h / 0.6);
+                letter-spacing: 0.15em;
+                z-index: -1;
+                transform: scale(1.5);
+                filter: blur(4px);
+                transition:
+                    filter 0.5s ease,
+                    color 0.5s ease;
+            }
+        }
+    }
+
     #menu1 {
         grid-area: menu1;
         place-self: end center;

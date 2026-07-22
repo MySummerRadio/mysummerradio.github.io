@@ -14,6 +14,7 @@
 
     /* Complementary color of --sky-color */
     --earth-color: oklch(28% 0.06% 71.491deg); /* #3b2300 */
+    --dark-blue: oklch(46.4% 0.14 253.032deg); /* #0659A4 */
 
     /* triadic paletton */
     --white: oklch(100% 0 0deg);
@@ -27,8 +28,8 @@
 }
 
 :where([data-astro-image]) {
-  object-fit: var(--fit);
-  object-position: var(--pos);
+  object-fit: var(--fit, contain);
+  object-position: var(--pos, center);
 }
 
 :where([data-astro-image='full-width']) {
@@ -43,19 +44,10 @@ h1 {
     font-family: var(--title-font);
 
     /* @link https://utopia.fyi/clamp/calculator?a=320,1240,27—48 */
-    font-size: clamp(27px, 19.6957px + 2.2826vw, 48px);
-    font-weight: 400;
-}
+    --raw-fs: clamp(27px, 19.6957px + 2.2826vw, 48px);
 
-
-.menu-link {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-        text-underline-offset: 0.1ch;
-        color: var(--white);
-        text-decoration-color: var(--white);
-        text-decoration-thickness: 2px;
-    }
+    /* https://ishadeed.com/article/css-round/ */
+    font-size: round(down, var(--raw-fs), 2px);
+    font-weight: bold;
+    font-synthesis: weight;
 }
