@@ -14,11 +14,13 @@ const menuItems = [
 <Layout pageTitle={pageTitle} className={className}>
     <Logo home />
     <nav class="menu">
-        {menuItems.map((item, index) => (
-            <div id={`menu${index + 1}`} data-label={item.label}>
-                <a href={item.href}>{item.label.toUpperCase()}</a>
-            </div>
-        ))}
+        {
+            menuItems.map((item, index) => (
+                <div id={`menu${index + 1}`} data-label={item.label}>
+                    <a href={item.href}>{item.label.toUpperCase()}</a>
+                </div>
+            ))
+        }
     </nav>
 </Layout>
 
@@ -68,7 +70,7 @@ const menuItems = [
                 filter: blur(4px);
                 transition:
                     filter 0.5s ease,
-                    letter-spacing 0.5s ease;
+                    letter-spacing 0.5s ease,
                     color 0.5s ease;
             }
         }
