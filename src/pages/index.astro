@@ -1,25 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/Logo.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
-type SidebarEntry = CollectionEntry<"sidebars">;
-const sidebars: SidebarEntry[] = await getCollection("sidebars");
-
 const pageTitle = "My Summer Radio";
 const className = "home";
+const menuItems = [
+    { label: "blog", href: "/blog" },
+    { label: "downloads", href: "/downloads" },
+    { label: "stuff", href: "/stuff" },
+    { label: "reviews", href: "/reviews" },
+];
 ---
 
 <Layout pageTitle={pageTitle} className={className}>
     <Logo home />
     <nav class="menu">
-        <div id="menu1" data-label="blog">
-            <a href="/blog">BLOG</a>
-        </div>
-        <div id="menu2" data-label="downloads">
-            <a href="#">DOWNLOADS</a>
-        </div>
-        <div id="menu3" data-label="stuff"><a href="#">STUFF</a></div>
-        <div id="menu4" data-label="reviews"><a href="#">REVIEWS</a></div>
+        {menuItems.map((item, index) => (
+            <div id={`menu${index + 1}`} data-label={item.label}>
+                <a href={item.href}>{item.label.toUpperCase()}</a>
+            </div>
+        ))}
     </nav>
 </Layout>
 
@@ -50,6 +49,7 @@ const className = "home";
                 &::after {
                     color: oklch(from var(--white) l c h / 1);
                     filter: blur(0);
+                    letter-spacing: 0.1em;
                 }
             }
 
@@ -60,14 +60,15 @@ const className = "home";
                 content: attr(data-label);
                 font-size: 0.8lh;
                 font-family: var(--text-font);
-                font-weight: 900;
+                font-weight: 700;
                 color: oklch(from var(--white) l c h / 0.6);
-                letter-spacing: 0.15em;
+                letter-spacing: 0.05em;
                 z-index: -1;
                 transform: scale(1.5);
                 filter: blur(4px);
                 transition:
                     filter 0.5s ease,
+                    letter-spacing 0.5s ease;
                     color 0.5s ease;
             }
         }
