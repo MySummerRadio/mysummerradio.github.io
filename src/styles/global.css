@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: aoharu;
-    src: url("/assets/aoharu-marker-mini.ttf") format("truetype"),
-         url("/assets/aoharu-marker-mini.woff") format("woff");
+    src: url("/assets/aoharu-marker-mini.woff") format("woff"),
+         url("/assets/aoharu-marker-mini.ttf") format("truetype");
 }
 
 :root {
