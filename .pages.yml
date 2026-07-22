@@ -3,10 +3,6 @@ media:
     input: src/assets/images
     output: "@assets/images"
     rename: safe
-  - name: gallery
-    input: src/assets/gallery
-    output: "@assets/gallery"
-    rename: safe
 content:
   - name: posts
     label: Blog
@@ -35,63 +31,6 @@ content:
       default:
         sort: pubDate
         order: desc
-  - name: sidebars
-    label: Sidebars
-    type: group
-    items:
-      - name: left
-        label: Left
-        type: file
-        path: src/content/sidebar-left.yaml
-        fields:
-          - name: title
-            type: string
-          - name: sections
-            label: Sections
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{heading} ({index})"
-            fields:
-              - name: heading
-                type: string
-              - name: text
-                type: rich-text
-      - name: right
-        label: Right
-        type: file
-        path: src/content/sidebar-right.yaml
-        fields:
-          - name: title
-            type: string
-          - name: sections
-            label: Sections
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{heading} ({index})"
-            fields:
-              - name: heading
-                type: string
-              - name: text
-                type: rich-text
-  - name: gallery
-    label: Gallery
-    type: file
-    path: src/content/gallery.json
-    format: json
-    list: true
-    fields:
-      - name: image
-        type: image
-        options:
-          media: gallery
-          path: src/assets/gallery
-          rename: safe
-      - name: caption
-        type: string
   - name: about
     label: À propos
     type: file
