@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.1.1"
+    "astro": "^7.1.4"
   },
   "devDependencies": {
-    "commit-and-tag-version": "^13.0.0",
-    "concurrently": "^10.0.3",
-    "stylelint": "^17.14.0",
+    "commit-and-tag-version": "^13.1.2",
+    "concurrently": "^10.0.4",
+    "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.3",
     "wait-port": "^1.1.0"
