@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.8](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.7...v0.0.8) (2026-07-31)
+
+### Features
+
+* add squiggly animation to homepage links ([d4bdba8](https://github.com/MySummerRadio/mysummerradio/commit/d4bdba8b80b413287cb8791efdf38cdaf7a70569))
+
+### Bug Fixes
+
+* home menu looks better ([141415d](https://github.com/MySummerRadio/mysummerradio/commit/141415dd677b435f9b728e53661af418ce38581b))
+* name links ([b68995b](https://github.com/MySummerRadio/mysummerradio/commit/b68995bb29aa93f37a502d74dd75afb85f893a90))
+* refactor menu items astro style ([37851c0](https://github.com/MySummerRadio/mysummerradio/commit/37851c066920ad29bfa916b130b94697cba7d6d5))
+* remove sidebars, gallery ([9eb6958](https://github.com/MySummerRadio/mysummerradio/commit/9eb69584ed076d1635c93e43a8d4c1863d2d6ec0))
 ## [0.0.7](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.6...v0.0.7) (2026-07-21)
 
 ### Features
