@@ -1,0 +1,24 @@
+/* composition/page.css */
+
+/* @link https://www.joshwcomeau.com/css/full-bleed/ */
+.page {
+  display: grid;
+  grid-template-columns:
+    1fr
+    clamp(16rem, 90vw, var(--wrapper-max-width, 70rem))
+    1fr;
+
+  & > * {
+    grid-column: 2;
+  }
+
+  & > .full-bleed {
+    width: 100%;
+    max-width: unset;
+    grid-column: 1 / -1;
+  }
+
+  &.with-header {
+    padding-block-start: var(--head-height);
+  }
+}
