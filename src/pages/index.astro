@@ -4,10 +4,18 @@ import Logo from "../components/Logo.astro";
 const pageTitle = "My Summer Radio";
 const className = "home";
 const menuItems = [
-    { label: "blog", href: "/blog" },
-    { label: "downloads", href: "/downloads" },
-    { label: "stuff", href: "/stuff" },
-    { label: "reviews", href: "/reviews" },
+    {
+        label: "secrets",
+        description: "(about me and what i do)",
+        href: "/blog",
+    },
+    { label: "music", description: "(i fell in love with)", href: "/music" },
+    {
+        label: "downloads",
+        description: "(you can find only here)",
+        href: "/downloads",
+    },
+    { label: "blank", description: "(...)", href: "/reviews" },
 ];
 ---
 
@@ -16,7 +24,11 @@ const menuItems = [
     <nav class="menu">
         {
             menuItems.map((item, index) => (
-                <div id={`menu${index + 1}`} data-label={item.label}>
+                <div
+                    id={`menu${index + 1}`}
+                    data-label={item.label}
+                    data-description={item.description}
+                >
                     <a href={item.href}>{item.label.toUpperCase()}</a>
                 </div>
             ))
@@ -38,7 +50,6 @@ const menuItems = [
             font-weight: bold;
             font-synthesis: weight;
             color: var(--dark-blue);
-            /*letter-spacing: -0.35ch;*/
             transition: text-shadow 0.3s ease;
 
             & a {
@@ -50,24 +61,49 @@ const menuItems = [
 
                 &::after {
                     color: oklch(from var(--white) l c h / 1);
-                    filter: blur(0);
+                    filter: blur(2px);
+                }
+
+                &::before {
                     letter-spacing: 0.1em;
+                    filter: blur(0);
+                }
+
+                & a {
+                    animation: squiggly 0.4s linear infinite;
                 }
             }
 
             &::after {
                 position: absolute;
-                top: 0.2lh;
-                left: 5vw;
+                top: -0.5lh;
+                left: 4vw;
                 content: attr(data-label);
-                font-size: 0.8lh;
+                font-size: 1lh;
                 font-family: var(--text-font);
                 font-weight: 700;
                 color: oklch(from var(--white) l c h / 0.6);
                 letter-spacing: 0.05em;
                 z-index: -1;
-                transform: scale(1.5);
-                filter: blur(4px);
+                filter: blur(5px);
+                transition:
+                    filter 0.5s ease,
+                    letter-spacing 0.5s ease,
+                    color 0.5s ease;
+            }
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 2vw;
+                content: attr(data-description);
+                font-size: 0.3lh;
+                font-family: var(--text-font);
+                font-weight: 700;
+                color: oklch(from var(--white) l c h / 0.9);
+                letter-spacing: 0.05em;
+                z-index: -1;
+                filter: blur(1px);
                 transition:
                     filter 0.5s ease,
                     letter-spacing 0.5s ease,
