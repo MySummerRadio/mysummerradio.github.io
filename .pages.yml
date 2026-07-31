@@ -4,6 +4,15 @@ media:
     output: "@assets/images"
     rename: safe
 content:
+  - name: about
+    label: À propos
+    type: file
+    path: src/content/about.md
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
   - name: posts
     label: Blog
     type: collection
@@ -31,15 +40,6 @@ content:
       default:
         sort: pubDate
         order: desc
-  - name: about
-    label: À propos
-    type: file
-    path: src/pages/about.md
-    fields:
-      - name: title
-        type: string
-      - name: body
-        type: rich-text
 settings:
   content:
     merge: true
