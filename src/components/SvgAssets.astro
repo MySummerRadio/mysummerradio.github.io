@@ -12,6 +12,60 @@
                 d="M1,1 L1,0 C0.977,0.004 0.774,0.081 0.747,0.094 C0.737,0.099 0.737,0.099 0.62,0.152 C0.567,0.176 0.549,0.21 0.387,0.22 C0.318,0.224 0.318,0.231 0.248,0.189 C0.205,0.164 0.129,0.123 0.119,0.118 C0.11,0.113 0.011,0.06 0.001,0.068 L0.001,0.448 L0,0.448 L0,1 L1,1 Z"
             ></path>
         </clipPath>
+        <filter id="squiggly-0">
+            <feTurbulence
+                id="turbulence"
+                baseFrequency="0.02"
+                numOctaves="3"
+                result="noise"
+                seed="0"></feTurbulence>
+            <feDisplacementMap
+                id="displacement"
+                in="SourceGraphic"
+                in2="noise"
+                scale="4"></feDisplacementMap>
+        </filter>
+        <filter id="squiggly-1">
+            <feTurbulence
+                id="turbulence"
+                baseFrequency="0.02"
+                numOctaves="3"
+                result="noise"
+                seed="1"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6"
+            ></feDisplacementMap>
+        </filter>
+        <filter id="squiggly-2">
+            <feTurbulence
+                id="turbulence"
+                baseFrequency="0.02"
+                numOctaves="3"
+                result="noise"
+                seed="2"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4"
+            ></feDisplacementMap>
+        </filter>
+        <filter id="squiggly-3">
+            <feTurbulence
+                id="turbulence"
+                baseFrequency="0.02"
+                numOctaves="3"
+                result="noise"
+                seed="3"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6"
+            ></feDisplacementMap>
+        </filter>
+
+        <filter id="squiggly-4">
+            <feTurbulence
+                id="turbulence"
+                baseFrequency="0.02"
+                numOctaves="3"
+                result="noise"
+                seed="4"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4"
+            ></feDisplacementMap>
+        </filter>
     </defs>
     <path
         id="play"
