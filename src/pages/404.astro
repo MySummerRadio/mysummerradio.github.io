@@ -4,27 +4,31 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="404">
     <article>
+        <p></p>
         <div>
             <h1>SORRY</h1>
             <p>(No page here)</p>
         </div>
-        <a href="/">Back 2 home</a>
-        <p></p>
+        <a href="/" style="color: white; font-weight: normal;">Back 2 home</a>
     </article>
 </Layout>
 
 <style>
     article {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        min-height: 80vh;
         display: grid;
-        place-items: center;
-        min-height: 100vh;
-        text-align: center;
-        width: 100vw;
+        grid-template-columns: subgrid;
         color: white;
         font-weight: bold;
+        place-self: center;
+        text-align: center;
 
         & > * {
-            width: 100%;
+            grid-column: 1 / -1;
+            place-self: center;
+            text-align: center;
         }
     }
 </style>
