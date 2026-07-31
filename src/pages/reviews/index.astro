@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Logo from "../../components/Logo.astro";
+
+type ReviewEntry = CollectionEntry<"reviews">;
+
+const reviews = (await getCollection("reviews"))
+    .filter((review) => review.data.published)
+    .sort(
+        (a: ReviewEntry, b: ReviewEntry): number =>
+            b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    );
+const pageTitle = "My Summer Reviews";
+const className = "reviews";
+---
+
+<Layout pageTitle={pageTitle} className={className}>
+    <Logo />
+    <ul id="list">
+        {
+            reviews.map((review: ReviewEntry) => (
+                <li>
+                    <a href={`/reviews/${review.id}`}>
+                        {review.data.pubDate}: {review.data.title}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
+
+<style>
+    #list {
+        grid-area: list;
+        margin-block-end: 16.6667vh;
+    }
+</style>

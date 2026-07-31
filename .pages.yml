@@ -40,6 +40,39 @@ content:
       default:
         sort: pubDate
         order: desc
+  - name: reviews
+    label: Music
+    type: collection
+    path: src/content/reviews
+    fields:
+      - name: title
+        type: string
+      - name: pubDate
+        type: date
+        options:
+          format: "yyyy-MM-dd"
+      - name: published
+        type: boolean
+        default: true
+      - name: artist
+        type: string
+      - name: cover
+        type: image
+        options:
+          media: images
+      - name: description
+        type: string
+      - name: tags
+        type: string
+        list: true
+      - name: body
+        type: rich-text
+    view:
+      fields: [title, pubDate, published]
+      sort: [pubDate, title]
+      default:
+        sort: pubDate
+        order: desc
 settings:
   content:
     merge: true

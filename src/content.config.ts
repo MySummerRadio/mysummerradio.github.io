@@ -13,16 +13,17 @@ const blog = defineCollection({
   }),
 });
 
-const sidebars = defineCollection({
-  loader: glob({ pattern: "sidebar-*.yaml", base: "./src/content" }),
-  schema: z.object({
-    sections: z.array(
-      z.object({
-        heading: z.string(),
-        text: z.string(),
-      }),
-    ),
+const reviews = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/content/reviews" }),
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    artist: z.string().optional(),
+    cover: image().optional(),
+    description: z.string().optional(),
+    pubDate: z.coerce.date(),
+    published: z.boolean().optional(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 
-export const collections = { blog, sidebars };
+export const collections = { blog, reviews };
