@@ -56,21 +56,23 @@ const menuItems = [
                 text-decoration: none;
             }
 
-            &:hover {
-                text-shadow: 0 0 0.2em var(--white);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    text-shadow: 0 0 0.2em var(--white);
 
-                &::after {
-                    color: oklch(from var(--white) l c h / 1);
-                    filter: blur(2px);
-                }
+                    &::after {
+                        color: oklch(from var(--white) l c h / 1);
+                        filter: blur(2px);
+                    }
 
-                &::before {
-                    letter-spacing: 0.1em;
-                    filter: blur(0);
-                }
+                    &::before {
+                        letter-spacing: 0.1em;
+                        filter: blur(0);
+                    }
 
-                & a {
-                    animation: squiggly 0.4s linear infinite;
+                    & a {
+                        animation: squiggly 0.4s linear infinite;
+                    }
                 }
             }
 
@@ -96,6 +98,7 @@ const menuItems = [
                 position: absolute;
                 bottom: 0;
                 left: 2vw;
+                width: 200%;
                 content: attr(data-description);
                 font-size: 0.3lh;
                 font-family: var(--text-font);
