@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Logo from "../../components/Logo.astro";
 
@@ -21,6 +22,7 @@ const className = "reviews";
         {
             reviews.map((review: ReviewEntry) => (
                 <li>
+                    <Image src={review.data.cover} alt={review.data.title} />
                     <a href={`/reviews/${review.id}`}>
                         {review.data.pubDate}: {review.data.title}
                     </a>
