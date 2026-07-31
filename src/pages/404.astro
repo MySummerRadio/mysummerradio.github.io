@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404">
+    <article>
+        <div>
+            <h1>SORRY</h1>
+            <p>(No page here)</p>
+        </div>
+        <a href="/">Back 2 home</a>
+        <p></p>
+    </article>
+</Layout>
+
+<style>
+    article {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        text-align: center;
+        width: 100vw;
+        color: white;
+        font-weight: bold;
+
+        & > * {
+            width: 100%;
+        }
+    }
+</style>
