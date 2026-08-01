@@ -1,7 +1,7 @@
 media:
   - name: images
-    input: src/assets/images
-    output: "@assets/images"
+    input: src/assets/images/content
+    output: "@assets/images/content"
     rename: safe
 content:
   - name: about
