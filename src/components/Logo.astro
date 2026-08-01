@@ -7,27 +7,39 @@ const { home } = Astro.props;
 {/* Link to home if not on home page, put id on a */}
 {
     home ? (
-        <Image
-            src={logo}
-            priority
-            alt="my summer radio logo"
-            class="logo"
-            id="logo"
-            style="--fit: contain; --pos: center; min-width: 0; min-height: 0; overflow: hidden;"
-            height="300"
-            transition:name="logo"
-        />
-    ) : (
-        <a id="logo" href="/">
+        <div id="logo">
             <Image
                 src={logo}
                 priority
                 alt="my summer radio logo"
-                class="logo"
-                style="--fit: contain; --pos: center; min-width: 0; min-height: 0; overflow: hidden;"
-                height="300"
+                class="logo-img"
+                layout="none"
+                style="--fit: contain; --pos: center; height: auto; min-width: 0; min-height: 0; overflow: hidden;"
                 transition:name="logo"
             />
-        </a>
+        </div>
+    ) : (
+        <div id="logo">
+            <a href="/">
+                <Image
+                    src={logo}
+                    priority
+                    alt="my summer radio logo"
+                    class="logo-img"
+                    layout="none"
+                    style="--fit: contain; --pos: center; height: auto; min-width: 0; min-height: 0; overflow: hidden;"
+                    transition:name="logo"
+                />
+            </a>
+        </div>
     )
 }
+
+<style>
+    #logo {
+        grid-area: logo;
+        padding-block-start: 2vw;
+        padding-inline-start: 2vw;
+        place-self: center start;
+    }
+</style>
