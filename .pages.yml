@@ -71,6 +71,36 @@ content:
       default:
         sort: pubDate
         order: desc
+  - name: tags
+    label: Tags
+    type: collection
+    path: content/tags
+    format: json          # or yaml — your call
+    view:
+      fields: [name, color]
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: slug
+        label: Slug
+        type: string
+        pattern: ^[a-z0-9-]+$
+      - name: color
+        label: Color
+        type: select
+        options:
+          values:
+            - name: coral
+              label: Coral
+            - name: peach
+              label: Peach
+            - name: mint
+              label: Mint
+            - name: sky
+              label: Sky
+            - name: lavender
+              label: Lavender
 settings:
   content:
     merge: true
