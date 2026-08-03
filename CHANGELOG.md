@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.8...v0.0.9) (2026-08-03)
+
+### Features
+
+* add 404 page ([99ab103](https://github.com/MySummerRadio/mysummerradio/commit/99ab103690dde794b17e54de5963eed6a92813f1))
+* add reviews for music page ([6d2748a](https://github.com/MySummerRadio/mysummerradio/commit/6d2748a59b29275198649552e6f5a2c4b983c4a5))
+* cover images in reviews ([2422d6f](https://github.com/MySummerRadio/mysummerradio/commit/2422d6ff241e6de803173060fa8cba42af5ac423))
+* let's do CUBE ([cf3fa92](https://github.com/MySummerRadio/mysummerradio/commit/cf3fa9216cd5282e9f1cfb415996eb8583960001))
+
+### Bug Fixes
+
+* gate hover effects with media query ([c0a53ca](https://github.com/MySummerRadio/mysummerradio/commit/c0a53ca9b57c07fbe7435ed66882c85f19f9041b))
+* link before with nowrap, bigger font ([6c0dda5](https://github.com/MySummerRadio/mysummerradio/commit/6c0dda55801d4dd2834867d34c2741c6bf7dedd4))
+* move content images to own dir ([3edc590](https://github.com/MySummerRadio/mysummerradio/commit/3edc590a809bf56cb3ce9852b397ff21b654427e))
+* use TS path aliases for imports ([62db921](https://github.com/MySummerRadio/mysummerradio/commit/62db92137a2da201a3dd245f9a8a1677b35eb738))
 ## [0.0.8](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.7...v0.0.8) (2026-07-31)
 
 ### Features
