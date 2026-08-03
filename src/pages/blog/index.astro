@@ -1,8 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
-import Logo from "../../components/Logo.astro";
-
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Logo from "@/components/Logo.astro";
+import About from "@/content/about.md";
 type BlogEntry = CollectionEntry<"blog">;
 
 const posts = (await getCollection("blog"))
@@ -17,6 +17,9 @@ const className = "blog";
 
 <Layout pageTitle={pageTitle} className={className}>
     <Logo />
+    <div id="about" class="flow prose sidebar">
+        <About />
+    </div>
     <ul id="list">
         {
             posts.map((post: BlogEntry) => (
@@ -34,5 +37,14 @@ const className = "blog";
     #list {
         grid-area: list;
         margin-block-end: 16.6667vh;
+    }
+
+    #about {
+        grid-area: about;
+        margin-block-end: 16.6667vh;
+    }
+
+    .sidebar {
+        font-size: 1rem;
     }
 </style>
