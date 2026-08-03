@@ -5,7 +5,6 @@ description: This is the first one
 published: true
 tags:
   - dev
-  - typography
 ---
 Là, j'ai utilisé la police *Bitcount Prop Single Ink*. Je la trouve assez sympa, et comme c'est une police variable, il y a pas mal de possibilités de personnalisation. (Il y a tout une [famille de polices Bitcount](https://fonts.google.com/?query=bitcount&preview.script=Latn).) Mais elle n'est pas super lisible pour le texte.
 

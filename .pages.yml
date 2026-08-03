@@ -28,7 +28,9 @@ content:
       - name: description
         type: string
       - name: tags
-        type: string
+        type: reference
+        options:
+          collection: tags
         list: true
       - name: body
         type: rich-text
@@ -61,7 +63,12 @@ content:
       - name: description
         type: string
       - name: tags
-        type: string
+        type: reference
+        options:
+          collection: tags
+          multiple: true
+          value: "{name}"
+          label: "{name}"
         list: true
       - name: body
         type: rich-text
@@ -74,33 +81,29 @@ content:
   - name: tags
     label: Tags
     type: collection
-    path: content/tags
-    format: json          # or yaml — your call
+    path: src/content/tags
+    filename: "{slug}.json"
+    format: json
     view:
       fields: [name, color]
     fields:
       - name: name
         label: Name
         type: string
-      - name: slug
-        label: Slug
-        type: string
-        pattern: ^[a-z0-9-]+$
       - name: color
         label: Color
         type: select
         options:
+          # keep in sync with lib/tag-colors.ts!
           values:
-            - name: coral
-              label: Coral
-            - name: peach
-              label: Peach
-            - name: mint
-              label: Mint
-            - name: sky
-              label: Sky
-            - name: lavender
-              label: Lavender
+            - name: yellow
+              label: Yellow
+            - name: pink
+              label: Pink
+            - name: green
+              label: Green
+            - name: blue
+              label: Blue
 settings:
   content:
     merge: true

@@ -1,0 +1,39 @@
+---
+import { TAG_COLOR_VARS } from "@/lib/tag-colors";
+
+interface Props {
+    name: string;
+    color: keyof typeof TAG_COLOR_VARS;
+}
+const { name, color } = Astro.props;
+---
+
+<span class="tag-pill" style={`--tag-color: ${TAG_COLOR_VARS[color]};`}>
+    {name}
+</span>
+
+<style>
+    .tag-pill {
+        --tag-color: var(--white); /* fallback if unset */
+
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25em 0.75em;
+        border-radius: 999px;
+
+        font-size: 0.8125rem;
+        font-weight: 500;
+        line-height: 1.4;
+        white-space: nowrap;
+
+        color: oklch(from var(--tag-color) 25% c h);
+        background: oklch(from var(--tag-color) 95% calc(c * 0.4) h);
+        border: 1px solid oklch(from var(--tag-color) 80% calc(c * 0.7) h);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .tag-pill:hover {
+            background: oklch(from var(--tag-color) 90% calc(c * 0.5) h);
+        }
+    }
+</style>

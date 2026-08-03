@@ -42,6 +42,7 @@
     --pink: oklch(86.3% 0.109 334.691deg);
     --yellow: oklch(96.1% 0.138 105.627deg);
     --green: oklch(92% 0.177 136.335deg);
+    --blue: var(--sky-color);
 
     /* font family */
     --title-font: aoharu, cursive;

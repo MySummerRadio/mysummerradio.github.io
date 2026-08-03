@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import { TAG_COLOR_VARS } from "@/lib/tag-colors";
+import TagPill from "./TagPill.astro";
+
+interface Props {
+    tagSlugs: string[]; // e.g. post.data.tags
+}
+const { tagSlugs } = Astro.props;
+
+const allTags = await getCollection("tags");
+const tagMap = new Map(allTags.map((t) => [t.data.name, t.data]));
+
+const resolvedTags = tagSlugs
+    .map((slug) => tagMap.get(slug))
+    .filter((tag) => tag !== undefined);
+---
+
+<div class="post-tags">
+    {resolvedTags.map((tag) => <TagPill name={tag.name} color={tag.color} />)}
+</div>
+
+<style>
+    .post-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+</style>

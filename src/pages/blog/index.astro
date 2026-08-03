@@ -1,8 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getCollection, render, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import Logo from "@/components/Logo.astro";
 import About from "@/content/about.md";
+import BlogEntry from "@/components/BlogEntry.astro";
 type BlogEntry = CollectionEntry<"blog">;
 
 const posts = (await getCollection("blog"))
@@ -21,15 +22,7 @@ const className = "blog";
         <About />
     </div>
     <ul id="list">
-        {
-            posts.map((post: BlogEntry) => (
-                <li>
-                    <a href={`/blog/${post.id}`}>
-                        {post.data.pubDate}: {post.data.title}
-                    </a>
-                </li>
-            ))
-        }
+        {posts.map((post: BlogEntry) => <BlogEntry post={post} />)}
     </ul>
 </Layout>
 
