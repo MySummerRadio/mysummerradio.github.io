@@ -94,7 +94,7 @@ content:
         label: Color
         type: select
         options:
-          # keep in sync with lib/tag-colors.ts!
+          # keep in sync with lib/tag-colors.ts and css!
           values:
             - name: pink
               label: Pink
