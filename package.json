@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.1.5"
+    "astro": "^7.1.6"
   },
   "devDependencies": {
     "commit-and-tag-version": "^13.1.2",
