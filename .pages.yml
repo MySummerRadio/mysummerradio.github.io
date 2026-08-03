@@ -96,12 +96,20 @@ content:
         options:
           # keep in sync with lib/tag-colors.ts!
           values:
-            - name: yellow
-              label: Yellow
             - name: pink
               label: Pink
+            - name: violet
+              label: Violet
+            - name: yellow
+              label: Yellow
+            - name: orange
+              label: Orange
+            - name: red
+              label: Red
             - name: green
               label: Green
+            - name: cyan
+              label: Cyan
             - name: blue
               label: Blue
 settings:

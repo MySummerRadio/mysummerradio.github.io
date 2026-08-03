@@ -40,8 +40,12 @@
     /* triadic paletton */
     --white: oklch(100% 0 0deg);
     --pink: oklch(86.3% 0.109 334.691deg);
+    --violet: oklch(84.1% 0.130 296.604deg);
     --yellow: oklch(96.1% 0.138 105.627deg);
+    --orange: oklch(85% 0.115 68.951deg);
+    --red: oklch(81.7% 0.103 19.531deg);
     --green: oklch(92% 0.177 136.335deg);
+    --cyan: oklch(92.4% 0.106 206.821deg);
     --blue: var(--sky-color);
 
     /* font family */
