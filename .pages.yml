@@ -32,6 +32,7 @@ content:
         options:
           collection: tags
           multiple: true
+          value: "{primary}"
       - name: body
         type: rich-text
     view:
