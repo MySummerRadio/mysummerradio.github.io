@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.10](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.9...v0.0.10) (2026-08-04)
+
+### Features
+
+* add tags collection in PagesCMS ([fd9ddc1](https://github.com/MySummerRadio/mysummerradio/commit/fd9ddc1c3af72494c998db493fba86e08b080603))
+* tag colors overkill system ([289273b](https://github.com/MySummerRadio/mysummerradio/commit/289273b4244476340fcdd685715994bc99d80151))
+
+### Bug Fixes
+
+* change tags property from string to reference ([1d9d59a](https://github.com/MySummerRadio/mysummerradio/commit/1d9d59a202f2d551568314b8078606be587de200))
+* more tag colors ([a61cc07](https://github.com/MySummerRadio/mysummerradio/commit/a61cc070519d7d9834348c1f4eb3a5958cc52906))
 ## [0.0.9](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.8...v0.0.9) (2026-08-03)
 
 ### Features
