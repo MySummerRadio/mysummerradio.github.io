@@ -33,7 +33,7 @@ content:
           collection: tags
           multiple: true
           value: "{primary}"
-          label: "{priamry} ({color})"
+          label: "{primary} ({color})"
       - name: body
         type: rich-text
     view:
