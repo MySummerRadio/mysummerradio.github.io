@@ -32,8 +32,8 @@ content:
         options:
           collection: tags
           multiple: true
-          value: "{slug}"
-          label: "{slug} ({color})"
+          value: "{primary}"
+          label: "{priamry} ({color})"
         list: true
       - name: body
         type: rich-text
@@ -70,8 +70,8 @@ content:
         options:
           collection: tags
           multiple: true
-          value: "{slug}"
-          label: "{slug} ({color})"
+          value: "{primary}"
+          label: "{primary} ({color})"
         list: true
       - name: body
         type: rich-text
