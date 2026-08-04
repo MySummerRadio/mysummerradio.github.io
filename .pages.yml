@@ -89,6 +89,7 @@ content:
     format: yaml
     view:
       fields: [name, color]
+      primary: name
     fields:
       - name: name
         label: Name
