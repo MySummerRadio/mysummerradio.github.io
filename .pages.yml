@@ -68,7 +68,7 @@ content:
           collection: tags
           multiple: true
           value: "{fields.name}"
-          label: "{fields.name}"
+          label: "{fields.name} ({fields.color})"
         list: true
       - name: body
         type: rich-text
