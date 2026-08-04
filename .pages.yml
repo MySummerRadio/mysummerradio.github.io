@@ -32,7 +32,7 @@ content:
         options:
           collection: tags
           multiple: true
-          value: "{primary}"
+          value: "{fields.name}"
       - name: body
         type: rich-text
     view:
