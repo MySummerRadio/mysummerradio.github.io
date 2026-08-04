@@ -34,7 +34,6 @@ content:
           multiple: true
           value: "{primary}"
           label: "{priamry} ({color})"
-        list: true
       - name: body
         type: rich-text
     view:
@@ -72,7 +71,6 @@ content:
           multiple: true
           value: "{primary}"
           label: "{primary} ({color})"
-        list: true
       - name: body
         type: rich-text
     view:
