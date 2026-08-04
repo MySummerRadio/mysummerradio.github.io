@@ -28,7 +28,7 @@ const reviews = defineCollection({
 });
 
 const tags = defineCollection({
-  loader: glob({ pattern: "*.json", base: "./src/content/tags" }),
+  loader: glob({ pattern: "*.yaml", base: "./src/content/tags" }),
   schema: z.object({
     name: z.string(),
     color: z.enum(TAG_COLORS),
