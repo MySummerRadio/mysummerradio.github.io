@@ -82,8 +82,8 @@ content:
     label: Tags
     type: collection
     path: src/content/tags
-    filename: "{slug}.json"
-    format: json
+    filename: "{primary}.yaml"
+    format: yaml
     view:
       fields: [name, color]
     fields:
