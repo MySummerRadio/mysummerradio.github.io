@@ -32,8 +32,6 @@ content:
         options:
           collection: tags
           multiple: true
-          value: "{primary}"
-          label: "{primary} ({color})"
       - name: body
         type: rich-text
     view:
@@ -64,13 +62,6 @@ content:
           media: images
       - name: description
         type: string
-      - name: tags
-        type: reference
-        options:
-          collection: tags
-          multiple: true
-          value: "{primary}"
-          label: "{primary} ({color})"
       - name: body
         type: rich-text
     view:
