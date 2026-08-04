@@ -31,6 +31,9 @@ content:
         type: reference
         options:
           collection: tags
+          multiple: true
+          value: "{slug}"
+          label: "{slug} ({color})"
         list: true
       - name: body
         type: rich-text
