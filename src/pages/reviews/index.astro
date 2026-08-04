@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
+import { formatDateToYYYYMMDD } from "@/lib/formatDate";
 import Logo from "@/components/Logo.astro";
 
 type ReviewEntry = CollectionEntry<"reviews">;
@@ -24,7 +25,8 @@ const className = "reviews";
                 <li>
                     <Image src={review.data.cover} alt={review.data.title} />
                     <a href={`/reviews/${review.id}`}>
-                        {review.data.pubDate}: {review.data.title}
+                        {formatDateToYYYYMMDD(review.data.pubDate)}:{" "}
+                        {review.data.title}
                     </a>
                 </li>
             ))
