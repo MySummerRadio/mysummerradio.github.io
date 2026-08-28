@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.2.8"
+    "astro": "^7.2.8",
+    "nanostores": "^1.5.2"
   },
   "devDependencies": {
     "commit-and-tag-version": "^13.1.2",
