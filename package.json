@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.1.6"
+    "astro": "^7.2.8"
   },
   "devDependencies": {
     "commit-and-tag-version": "^13.1.2",
-    "concurrently": "^10.0.4",
+    "concurrently": "^10.0.5",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.3",
