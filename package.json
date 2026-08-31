@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.2.8",
+    "astro": "^7.2.9",
     "nanostores": "^1.5.2"
   },
   "devDependencies": {
