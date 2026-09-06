@@ -152,24 +152,20 @@ const { pageTitle, className } = Astro.props;
     .reviews {
         & main {
             grid-template-areas:
-                "logo logo logo logo . . . . . . . ."
-                "logo logo logo logo . . . . . . . ."
+                "logo logo logo logo . . . pagetitle pagetitle pagetitle pagetitle ."
                 ". about about .  list list list list list  . . ."
                 ". about about .  list list list list list  . . ."
+                ". . . . list list list list list  . . ."
                 ". . . . list list list list list  . . .";
 
             @media (max-width: 768px) {
                 grid-template-areas:
                     "logo logo logo logo logo logo logo logo logo logo logo ."
-                    ". list list list list list list list list list list ."
-                    ". list list list list list list list list list list ."
+                    " . pagetitle pagetitle pagetitle pagetitle pagetitle pagetitle pagetitle pagetitle pagetitle pagetitle ."
+                    " . about about about about about about about about about about ."
                     ". list list list list list list list list list list ."
                     ". . . . . . . . . . . .";
             }
-        }
-
-        & #logo {
-            /*filter: drop-shadow(0 0 1px var(--earth-color));*/
         }
     }
 
