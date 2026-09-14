@@ -17,13 +17,16 @@ const resolvedTags = tagSlugs
 ---
 
 <div class="post-tags">
-    {resolvedTags.map((tag) => <TagPill name={tag.name} color={tag.color} />)}
+    {resolvedTags.map((tag) => (
+        <TagPill name={tag.name} color={tag.color} />
+    ))}
 </div>
 
 <style>
     .post-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5em;
+        gap: 0.2em;
+        margin-inline-start: 0.2em;
     }
 </style>
