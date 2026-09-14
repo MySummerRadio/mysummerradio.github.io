@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Logo from "@/components/Logo.astro";
 import About from "@/content/about.md";
-import BlogEntry from "@/components/BlogEntry.astro";
+import BlogEntryLi from "@/components/BlogEntryLi.astro";
 type BlogEntry = CollectionEntry<"blog">;
 
 const posts = (await getCollection("blog"))
@@ -18,11 +18,16 @@ const className = "blog";
 
 <Layout pageTitle={pageTitle} className={className}>
     <Logo />
+    <h1 id="pagetitle" data-label="SECRETS">
+        SECRETS
+    </h1>
     <div id="about" class="flow prose sidebar">
         <About />
     </div>
     <ul id="list">
-        {posts.map((post: BlogEntry) => <BlogEntry post={post} />)}
+        {posts.map((post: BlogEntry) => (
+            <BlogEntryLi post={post} />
+        ))}
     </ul>
 </Layout>
 
@@ -30,14 +35,14 @@ const className = "blog";
     #list {
         grid-area: list;
         margin-block-end: 16.6667vh;
+        display: flex;
+        flex-direction: column;
+        gap: var(--step-0);
     }
 
     #about {
         grid-area: about;
         margin-block-end: 16.6667vh;
-    }
-
-    .sidebar {
-        font-size: 1rem;
+        color: var(--dark-blue);
     }
 </style>

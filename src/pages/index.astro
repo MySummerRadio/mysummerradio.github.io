@@ -22,17 +22,15 @@ const menuItems = [
 <Layout pageTitle={pageTitle} className={className}>
     <Logo home />
     <nav class="menu">
-        {
-            menuItems.map((item, index) => (
-                <div
-                    id={`menu${index + 1}`}
-                    data-label={item.label}
-                    data-description={item.description}
-                >
-                    <a href={item.href}>{item.label.toUpperCase()}</a>
-                </div>
-            ))
-        }
+        {menuItems.map((item, index) => (
+            <div
+                id={`menu${index + 1}`}
+                data-label={item.label}
+                data-description={item.description}
+            >
+                <a href={item.href}>{item.label.toUpperCase()}</a>
+            </div>
+        ))}
     </nav>
 </Layout>
 

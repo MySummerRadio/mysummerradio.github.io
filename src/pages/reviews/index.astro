@@ -19,18 +19,19 @@ const className = "reviews";
 
 <Layout pageTitle={pageTitle} className={className}>
     <Logo />
+    <h1 id="pagetitle" data-label="MUSIC">
+        MUSIC
+    </h1>
     <ul id="list">
-        {
-            reviews.map((review: ReviewEntry) => (
-                <li>
-                    <Image src={review.data.cover} alt={review.data.title} />
-                    <a href={`/reviews/${review.id}`}>
-                        {formatDateToYYYYMMDD(review.data.pubDate)}:{" "}
-                        {review.data.title}
-                    </a>
-                </li>
-            ))
-        }
+        {reviews.map((review: ReviewEntry) => (
+            <li>
+                <Image src={review.data.cover} alt={review.data.title} />
+                <a href={`/reviews/${review.id}`}>
+                    {formatDateToYYYYMMDD(review.data.pubDate)}:{" "}
+                    {review.data.title}
+                </a>
+            </li>
+        ))}
     </ul>
 </Layout>
 
@@ -38,5 +39,19 @@ const className = "reviews";
     #list {
         grid-area: list;
         margin-block-end: 16.6667vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+        & li {
+            display: flex;
+            align-items: center;
+        }
+
+        & img {
+            width: 100px;
+            height: auto;
+        }
     }
 </style>
