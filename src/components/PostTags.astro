@@ -1,4 +1,7 @@
 ---
+import type { CollectionEntry } from "astro:content";
+type Tag = CollectionEntry<"tags">;
+
 import { getCollection } from "astro:content";
 import { TAG_COLOR_VARS } from "@/lib/tag-colors";
 import TagPill from "./TagPill.astro";
@@ -8,7 +11,7 @@ interface Props {
 }
 const { tagSlugs } = Astro.props;
 
-const allTags = await getCollection("tags");
+const allTags: Tag[] = await getCollection("tags");
 const tagMap = new Map(allTags.map((t) => [t.data.name, t.data]));
 
 const resolvedTags = tagSlugs
