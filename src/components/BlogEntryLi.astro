@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from "astro:content";
+type BlogEntry = CollectionEntry<"blog">;
+import { formatDateToYYYYMMDD } from "@/lib/formatDate";
+import PostTags from "@/components/PostTags.astro";
+const { post } = Astro.props as Props;
+
+export interface Props {
+    post: BlogEntry;
+}
+---
+
+<li>
+    <a href={`/blog/${post.id}`}>
+        {post.data.tags && (
+            <ul class="tags">
+                {formatDateToYYYYMMDD(post.data.pubDate)}
+                <PostTags tagSlugs={post.data.tags} />
+            </ul>
+        )}
+        <h2>{post.data.title}</h2>
+        {post.data.description && `${post.data.description}`}
+    </a>
+</li>
+
+<style>
+    li {
+        display: flex;
+        color: var(--dark-blue);
+
+        & a {
+            text-decoration: none;
+
+            & h2 {
+                text-decoration: underline;
+                font-family: "Zen Loop", cursive;
+            }
+        }
+    }
+
+    .tags {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+</style>
