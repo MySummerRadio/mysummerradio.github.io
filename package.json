@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.3.1",
+    "astro": "^7.3.2",
     "nanostores": "^1.5.3"
   },
   "devDependencies": {
-    "commit-and-tag-version": "^13.1.2",
+    "commit-and-tag-version": "^13.2.0",
     "concurrently": "^10.0.5",
     "stylelint": "^17.15.0",
     "stylelint-config-standard": "^40.0.0",
