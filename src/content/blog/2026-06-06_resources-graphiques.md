@@ -8,3 +8,6 @@ tags:
   - series
 ---
 Pour des décorations visuelles vintage, j'ai trouvé ce site pour les gamers, si ça t'inspire : [itch.io](https://itch.io/game-assets/tag-icons)
+
+![](@/assets/images/content/viagra-boyscave-world.jpg)
+
