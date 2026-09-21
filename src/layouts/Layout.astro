@@ -73,7 +73,7 @@ const { pageTitle, className } = Astro.props;
 
 <style is:global>
     body {
-        --text-color: var(--earth-color);
+        --text-color: var(--dark-blue);
         --grid-row-height: auto;
 
         margin: 0;
@@ -87,13 +87,17 @@ const { pageTitle, className } = Astro.props;
         grid-template-columns: repeat(12, minmax(10px, 1fr));
         grid-template-rows: repeat(5, var(--grid-row-height)) 1fr;
         gap: 2vw;
-        background: linear-gradient(
-            to bottom,
-            #fff,
-            var(--sky-color) 15%,
-            var(--sky-color) 80%,
-            var(--sky-color-light) 90%
-        );
+        /* add some texture? */
+        background-image:
+            url("./assets/textured-stripes.png"),
+            linear-gradient(
+                to bottom,
+                #fff,
+                var(--sky-color) 15%,
+                var(--sky-color) 80%,
+                var(--sky-color-light) 90%
+            );
+        background-repeat: repeat, no-repeat;
     }
 
     main {

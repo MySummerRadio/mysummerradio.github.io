@@ -23,9 +23,20 @@ const className = "post";
 
 <Layout title={pageTitle} className={className}>
     <Logo />
-    <Image src={review.data.cover} alt="" />
     <div id="content" class="flow prose">
-        <h1>{pageTitle}</h1>
+        <div class="pagetitle-block">
+            <h1>{pageTitle}</h1>
+            <Image src={review.data.cover} alt="" />
+        </div>
         <Content />
     </div>
 </Layout>
+
+<style>
+    .pagetitle-block {
+        img {
+            width: 33%;
+            height: auto;
+        }
+    }
+</style>

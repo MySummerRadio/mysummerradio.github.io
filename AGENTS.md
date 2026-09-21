@@ -19,12 +19,11 @@
    run), the feature was exercised end-to-end, and the diff was reviewed.
 2. **No fix proposals before reproduction.** Bugs get reproduced first —
    see the systematic-debugging skill.
-3. **Never commit directly to main.** Branch, then PR.
-4. **Secrets never enter files, logs, or messages.** Env vars only.
-5. **Destructive actions require explicit confirmation** — deleting data,
+3. **Secrets never enter files, logs, or messages.** Env vars only.
+4. **Destructive actions require explicit confirmation** — deleting data,
    force-pushing, dropping tables, sending external messages.
-6. All content should be in English (en-US) for consistency and accessibility.
-7. Always use Context7 when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
+5. All content should be in English (en-US) for consistency and accessibility.
+6. Always use Context7 when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
 
 ## Definitions of done
 
