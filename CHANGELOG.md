@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.11](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.10...v0.0.11) (2026-09-21)
+
+### Features
+
+* add AGENTS.md ([008a10a](https://github.com/MySummerRadio/mysummerradio/commit/008a10a623558e8b4d7c9c07d22f7b2286cc044c))
+* add nanostores dependency because why not ([05635a9](https://github.com/MySummerRadio/mysummerradio/commit/05635a966083e7f13c70c6996bebce9886481aa2))
+* restart work ([be1398a](https://github.com/MySummerRadio/mysummerradio/commit/be1398a0d3a1536f6b13c84cef48124300410f0c))
+
+### Bug Fixes
+
+* fix some css bugs, add bg texture ([75aa547](https://github.com/MySummerRadio/mysummerradio/commit/75aa547ec48e7860d4d2e67fae28fa210ba4f98f))
+* fixed pages cms tags ([4aad709](https://github.com/MySummerRadio/mysummerradio/commit/4aad709f4aed343c982aa891ecd033898208b33c))
+* rename component ([dbbb3a2](https://github.com/MySummerRadio/mysummerradio/commit/dbbb3a2047c5c426340b2fc5e3b7bfa5520827a2))
+* smaller tags ([2897a04](https://github.com/MySummerRadio/mysummerradio/commit/2897a042697321e8cd44686f0e34f67354cbdbd1))
+* **wip:** use yaml instead of json ([2a54e66](https://github.com/MySummerRadio/mysummerradio/commit/2a54e66f732d8c18ac8dd54da023999bf32dd7c0))
+
 ## [0.0.10](https://github.com/MySummerRadio/mysummerradio/compare/v0.0.9...v0.0.10) (2026-08-04)
 
 ### Features
